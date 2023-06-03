@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="images/javascript.png" alt="JavaScript" width="100" />
+  <img src="images/js.png" alt="JavaScript" width="100" />
   <img src="images/cpp.png" alt="C++" width="100" />
   <img src="images/html-css.png" alt="HTML CSS" width="100" />
 </p>
@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="images/coding.gif" alt="Coding GIF" />
+  <img src="images/coding.webp" alt="Coding GIF" />
 </p>
 
 ## 🚀 Habilidades
