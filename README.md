@@ -24,7 +24,6 @@
 
 - Desarrollo de aplicaciones web con HTML, CSS y JavaScript.
 - Programación en C++ y resolución de problemas algorítmicos.
-- Uso de frameworks y librerías como React.js y Node.js.
 - Diseño y desarrollo de bases de datos con MySQL y MongoDB.
 
 ## 📫 Contacto
