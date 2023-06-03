@@ -27,16 +27,9 @@
 - Uso de frameworks y librerías como React.js y Node.js.
 - Diseño y desarrollo de bases de datos con MySQL y MongoDB.
 
-## 💼 Experiencia
-
-- Desarrollador de software en [Empresa 1](https://www.empresa1.com) - 2018-presente
-- Desarrollador de frontend en [Empresa 2](https://www.empresa2.com) - 2016-2018
-
 ## 📫 Contacto
 
-- Sitio web: [tusitio.com](https://www.tusitio.com)
-- Correo electrónico: [tucorreo@gmail.com](mailto:tucorreo@gmail.com)
-- LinkedIn: [TuPerfil](https://www.linkedin.com/in/tuperfil)
-- Twitter: [@tuperfil](https://www.twitter.com/tuperfil)
+- Sitio web: [#](#)
+- Correo electrónico: [david.fonseca12p@gmail.com](mailto:david.fonseca12p@gmail.com)
 
 ¡No dudes en contactarme si tienes alguna pregunta, propuesta o simplemente quieres hablar sobre desarrollo de software y tecnología en general!
