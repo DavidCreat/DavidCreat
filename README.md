@@ -3,8 +3,8 @@
 </h1>
 
 <p align="center">
-  <img src="images/js.png" alt="JavaScript" width="100" />
-  <img src="images/cpp.png" alt="C++" width="100" />
+  <img src="images/Mi proyecto (1).png" alt="JavaScript" width="100" />
+  <img src="images/C++-Logo.wine.svg" alt="C++" width="100" />
   <img src="images/html-css.png" alt="HTML CSS" width="100" />
 </p>
 
