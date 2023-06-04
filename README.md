@@ -8,6 +8,8 @@
   <img src="images/html-css.png" alt="HTML CSS" width="100" />
 </p>
 
+
+
 <p align="center">
   <strong>Desarrollador de software | Apasionado por la resolución de problemas | Amante del código limpio</strong>
 </p>
@@ -19,6 +21,23 @@
 <p align="center">
   <img src="images/coding.webp" alt="Coding GIF" />
 </p>
+
+<p align="center">
+  <a href="https://open.spotify.com/playlist/53aiJEL8v7Kdu33WaTHlX0?si=74d6550965eb4ca6">
+    <img src="https://img.shields.io/badge/Mi%20playlist-Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white" alt="Mi playlist en Spotify">
+  </a>
+  <a href="https://www.youtube.com/channel/UCca2RLf62iHATmwoQ_rwAhg">
+    <img src="https://img.shields.io/badge/Suscríbete%20en-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Suscríbete en YouTube">
+  </a>
+  <a href="https://github.com/DavidCreat/SISTEMA_DE_PLAZOLETA_COMIDAS">
+    <img src="https://img.shields.io/badge/Último%20Proyecto-Archivo-blue?style=for-the-badge&logo=file" alt="Último Proyecto">
+  </a>
+</p>
+
+
+
+
+
 
 ## 🚀 Habilidades
 
