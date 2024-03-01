@@ -45,7 +45,7 @@
 
 ## 📫 Contacto
 
-- Sitio web: [eas1.com.es](eas1.com.es)
+- Sitio web: <a href="eas1.com.es">eas1.com.es</a>
 - Correo electrónico: [david.fonseca12p@gmail.com](mailto:david.fonseca12p@gmail.com)
 
 ¡No dudes en contactarme si tienes alguna pregunta, propuesta o simplemente quieres hablar sobre desarrollo de software y tecnología en general!
