@@ -126,13 +126,6 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=DavidCreat&theme=radical" alt="Contribuciones por Hora" />
 </details>
 
----
-
-### 🌈 Gráfico de Contribuciones en 3D
-
-<p align="center">
-  <img src="https://github.com/DavidCreat/DavidCreat/blob/main/profile-3d-contrib/profile-night-rainbow.svg" alt="Gráfico de Contribuciones en 3D" />
-</p>
 
 ---
 
