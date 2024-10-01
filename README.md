@@ -14,6 +14,7 @@
   ¡Bienvenido a mi laboratorio digital! Soy un desarrollador apasionado por crear soluciones web robustas y escalables.
 </p>
 
+
 <p align="center">
   <img src="images/coding.webp" alt="Coding GIF" />
 </p>
@@ -68,7 +69,8 @@
 
 ### 🎵 Actualmente escuchando
 
-![Actualmente escuchando](https://pixel.chat/8z3or-1tgfmQ3hr/faf6f9c4-8a95-4374-9293-a53fcfa0b5e9)
+[![Spotify Profile](https://spotify-github-profile.kittinanx.com/api/view.svg?uid=ytp4zazw91jvaybdwrk3bshd9&cover_image=true&theme=novatorem&show_offline=true&background_color=000000&interchange=true&bar_color=525252&bar_color_cover=false)](https://spotify-github-profile.kittinanx.com/api/view.svg?uid=ytp4zazw91jvaybdwrk3bshd9&redirect=true)
+
 
 ---
 
