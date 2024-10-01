@@ -16,7 +16,7 @@
 
 
 <p align="center">
-  <img src="images/coding.webp" alt="Coding GIF" />
+  <img src="images/bg.gif" alt="Coding GIF" />
 </p>
 
 ---
