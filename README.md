@@ -104,7 +104,7 @@
 ### 📫 Contacto
 
 - Sitio web: [eas1.com.es](https://eas1.com.es)
-- Correo: [david.fonseca@example.com](mailto:david.fonseca@example.com)
+- Correo: [david.fonseca12p@gmail.com](mailto:david.fonseca12p@gmail.com)
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=DavidCreat&label=Visitas%20al%20Perfil&color=blueviolet&style=flat" alt="Visitas al Perfil" />
