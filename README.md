@@ -3,10 +3,6 @@
 </h1>
 
 <p align="center">
-  <img src="images/11111111.png" alt="Mi Proyecto" width="100" />
-</p>
-
-<p align="center">
   <strong>Desarrollador Full Stack | Entusiasta de DevOps | Creador de Experiencias Web Innovadoras</strong>
 </p>
 
