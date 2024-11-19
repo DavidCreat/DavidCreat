@@ -80,9 +80,10 @@
 
 ### 🌐 Redes Sociales
 
-  <a href="https://www.linkedin.com/in/david-fonseca-635a3b2a9/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://dev.to/davidcreat" target="_blank"><img src="https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev.to&logoColor=white" alt="Dev.to" /></a>
-</p>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-fonseca-635a3b2a9/)  
+[![Dev.to](https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/davidcreat)  
+[![Mi Sitio Web](https://img.shields.io/badge/Mi_Sitio_Web-%23000000.svg?&style=for-the-badge&logo=githubpages&logoColor=white)](https://eas1.com.es/)
+
 
 ---
 
