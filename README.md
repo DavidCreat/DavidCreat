@@ -49,6 +49,7 @@
   <summary><b>🔍 Ver stack completo</b></summary>
   
   <div align="center">
+    <div>
     <h4>Frontend</h4>
     <p>
       <img src="https://img.shields.io/badge/React-FFD700?style=for-the-badge&logo=react&logoColor=black" />
@@ -57,7 +58,8 @@
       <img src="https://img.shields.io/badge/Next.js-FFFFFF?style=for-the-badge&logo=next.js&logoColor=black" />
       <img src="https://img.shields.io/badge/Tailwind_CSS-FFFFFF?style=for-the-badge&logo=tailwind-css&logoColor=black" />
     </p>
-    
+  </div>
+    <div>
     <h4>Backend</h4>
     <p>
       <img src="https://img.shields.io/badge/Node.js-FFD700?style=for-the-badge&logo=node.js&logoColor=black" />
@@ -65,7 +67,8 @@
       <img src="https://img.shields.io/badge/NestJS-FFFFFF?style=for-the-badge&logo=nestjs&logoColor=black" />
       <img src="https://img.shields.io/badge/GraphQL-FFD700?style=for-the-badge&logo=graphql&logoColor=black" />
     </p>
-    
+    </div>
+    <div>
     <h4>DevOps & Cloud</h4>
     <p>
       <img src="https://img.shields.io/badge/Docker-FFD700?style=for-the-badge&logo=docker&logoColor=black" />
@@ -74,7 +77,7 @@
       <img src="https://img.shields.io/badge/GCP-FFFFFF?style=for-the-badge&logo=google-cloud&logoColor=black" />
       <img src="https://img.shields.io/badge/GitHub_Actions-FFD700?style=for-the-badge&logo=github-actions&logoColor=black" />
     </p>
-  </div>
+</div>
 </details>
 
 <div align="center">
@@ -117,11 +120,11 @@
 
 <div align="center">
   <a href="https://github.com/DavidCreat/Sistema-de-Gestion-Orgnizada">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Sistema-de-Gestion-Orgnizada&theme=dark&bg_color=000000&title_color=FFD700&text_color=FFFFFF&icon_color=FFD700&hide_border=true" alt="Proyecto Destacado" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Sistema-de-Gestion-Orgnizada&theme=dark&bg_color=000000&title_color=FFD700&text_color=FFFFFF&icon_color=FFD700&hide_border=true" alt="Sistema de Gestión Organizada" />
   </a>
   
-  <a href="https://github.com/DavidCreat/Sistema-de-Gestion-Orgnizada">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Sistema-de-Gestion-Orgnizada&theme=dark&bg_color=000000&title_color=FFD700&text_color=FFFFFF&icon_color=FFD700&hide_border=true" alt="Proyecto Destacado" />
+  <a href="https://github.com/DavidCreat/fesc-student-agenda">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=fesc-student-agenda&theme=dark&bg_color=000000&title_color=FFD700&text_color=FFFFFF&icon_color=FFD700&hide_border=true" alt="FESC Student Agenda" />
   </a>
 </div>
 
@@ -229,7 +232,6 @@
 
 <details>
   <summary>📊 Estadísticas Detalladas</summary>
-  
   <div align="center">
     <h3>Wakatime Stats</h3>
     <img src="https://github-readme-stats.vercel.app/api/wakatime?username=DavidCreat&theme=dark&bg_color=000000&title_color=FFD700&text_color=FFFFFF&icon_color=FFD700&hide_border=true" alt="Wakatime Stats" />
