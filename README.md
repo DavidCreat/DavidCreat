@@ -35,81 +35,23 @@
 <!--  01  ·  WHOAMI                                                    -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 01 · whoami</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/01-whoami.svg" alt="01 · whoami" width="100%"/>
+</div>
 
 <div align="center">
   <img src="./assets/terminal.svg" alt="Terminal — whoami" width="85%" />
 </div>
 
-<table align="center" width="100%">
-  <tr>
-    <td valign="top" width="34%">
-      <samp>
-        <b>┌─── 01 ─────────────────┐</b><br/>
-        <b>│&nbsp;&nbsp;&nbsp;▸ SNAPSHOT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</b><br/>
-        <b>└────────────────────────┘</b>
-      </samp>
-      <br/><br/>
-      Arquitecto Full Stack con obsesion por <kbd>DX</kbd>, sistemas distribuidos y experiencias web que se sienten instantaneas.
-      <br/><br/>
-      Diseño <kbd>APIs tipadas end-to-end</kbd>, pipelines <kbd>CI/CD</kbd> idempotentes, y <kbd>UIs</kbd> que respetan al usuario.
-      <br/><br/>
-      <samp>
-        <code>mindset ▸</code> <b>build · ship · iterate</b>
-      </samp>
-    </td>
-    <td width="1%" valign="top">
-      <samp>
-        <br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│
-      </samp>
-    </td>
-    <td valign="top" width="32%">
-      <samp>
-        <b>┌─── 02 ─────────────────┐</b><br/>
-        <b>│&nbsp;&nbsp;&nbsp;▸ CURRENTLY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</b><br/>
-        <b>└────────────────────────┘</b>
-      </samp>
-      <br/><br/>
-      <samp><code>▸</code></samp> Shipping en <kbd>eas1.com.es</kbd>
-      <br/><br/>
-      <samp><code>▸</code></samp> Explorando <kbd>edge runtimes</kbd> &amp; <kbd>AI agents</kbd>
-      <br/><br/>
-      <samp><code>▸</code></samp> Aprendiendo <kbd>Rust</kbd> &amp; <kbd>WebGPU</kbd>
-      <br/><br/>
-      <samp><code>▸</code></samp> Mentoreando <kbd>devs junior</kbd> en LATAM
-      <br/><br/>
-      <samp>
-        <code>status ▸</code> <b>available for hire</b>
-      </samp>
-    </td>
-    <td width="1%" valign="top">
-      <samp>
-        <br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│
-      </samp>
-    </td>
-    <td valign="top" width="32%">
-      <samp>
-        <b>┌─── 03 ─────────────────┐</b><br/>
-        <b>│&nbsp;&nbsp;&nbsp;▸ FIND ME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</b><br/>
-        <b>└────────────────────────┘</b>
-      </samp>
-      <br/><br/>
-      <samp><code>web&nbsp;&nbsp;▸</code></samp> <a href="https://eas1.com.es"><kbd>eas1.com.es</kbd></a>
-      <br/><br/>
-      <samp><code>blog ▸</code></samp> <a href="https://dev.to/davidcreat"><kbd>dev.to/davidcreat</kbd></a>
-      <br/><br/>
-      <samp><code>mail ▸</code></samp> <a href="mailto:david.fonseca12p@gmail.com"><kbd>david.fonseca12p@gmail.com</kbd></a>
-      <br/><br/>
-      <samp><code>geo&nbsp;&nbsp;▸</code></samp> <kbd>Ibague, Tolima</kbd> · <samp>UTC−5</samp>
-      <br/><br/>
-      <samp>
-        <code>uptime ▸</code> <b>24 / 7</b>
-      </samp>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="./assets/whoami-cards.svg" alt="whoami — snapshot, currently, find me" width="100%"/>
+</div>
+
+<p align="center">
+  <a href="https://eas1.com.es"><img src="https://img.shields.io/badge/eas1.com.es-0a0a0a?style=flat-square&logo=firefoxbrowser&logoColor=FFD700&labelColor=0a0a0a" height="22"/></a>
+  <a href="https://dev.to/davidcreat"><img src="https://img.shields.io/badge/dev.to%2Fdavidcreat-0a0a0a?style=flat-square&logo=dev.to&logoColor=FFD700&labelColor=0a0a0a" height="22"/></a>
+  <a href="mailto:david.fonseca12p@gmail.com"><img src="https://img.shields.io/badge/david.fonseca12p%40gmail.com-0a0a0a?style=flat-square&logo=gmail&logoColor=FFD700&labelColor=0a0a0a" height="22"/></a>
+</p>
 
 <br/>
 
@@ -117,9 +59,9 @@
 <!--  02  ·  TECH CONSTELLATION                                        -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 02 · tech.constellation()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/02-tech-constellation.svg" alt="02 · tech.constellation()" width="100%"/>
+</div>
 
 <div align="center">
   <img src="./assets/constellation.svg" alt="Tech Constellation — orbital map of skills" width="100%" />
@@ -203,9 +145,9 @@
 <!--  03  ·  METRICS                                                   -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 03 · metrics.live()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/03-metrics-live.svg" alt="03 · metrics.live()" width="100%"/>
+</div>
 
 <div align="center">
   <picture>
@@ -235,9 +177,9 @@
 <!--  04  ·  ACTIVITY GRAPH                                            -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 04 · activity.graph()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/04-activity-graph.svg" alt="04 · activity.graph()" width="100%"/>
+</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=DavidCreat&theme=react-dark&bg_color=00000000&color=FFD700&line=FFD700&point=FFF8DC&area=true&area_color=FFD700&hide_border=true&radius=12&custom_title=Contribution%20Timeline"/>
@@ -251,9 +193,9 @@
 <!--  05  ·  SNAKE (auto-generated)                                    -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 05 · snake.eat(contributions)</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/05-snake-eat.svg" alt="05 · snake.eat(contributions)" width="100%"/>
+</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/DavidCreat/DavidCreat/output/snake-dark.svg"/>
@@ -267,21 +209,16 @@
 <!--  06  ·  TROPHIES + PROFILE CARDS                                  -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 06 · achievements.unlocked()</samp>
-</h2>
-
 <div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=DavidCreat&theme=onedark&no-frame=true&no-bg=true&row=1&column=7&margin-w=10&margin-h=10" alt="Trophies" width="100%"/>
-  </a>
+  <img src="./assets/headers/06-achievements.svg" alt="06 · achievements.unlocked()" width="100%"/>
 </div>
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=DavidCreat&theme=nord_dark" height="170" alt="Profile Details"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=DavidCreat&theme=nord_dark" height="170" alt="Repos per Language"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=DavidCreat&theme=nord_dark" height="170" alt="Most Commit Language"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=DavidCreat&theme=nord_dark" height="170" alt="Stats"/>
+  <img src="./assets/trophies.svg" alt="Trophies — achievements unlocked" width="100%"/>
+</div>
+
+<div align="center">
+  <img src="./assets/stats-board.svg" alt="Profile Details · Repos per Language · Most Commit Language · Stats" width="100%"/>
 </div>
 
 <br/>
@@ -290,9 +227,9 @@
 <!--  07  ·  PINNED                                                    -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 07 · pinned.repositories()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/07-pinned-repos.svg" alt="07 · pinned.repositories()" width="100%"/>
+</div>
 
 <div align="center">
   <a href="https://github.com/DavidCreat/Sistema-de-Gestion-Orgnizada">
@@ -315,9 +252,9 @@
 <!--  08  ·  CAREER TIMELINE (Mermaid)                                 -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 08 · career.timeline()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/08-career-timeline.svg" alt="08 · career.timeline()" width="100%"/>
+</div>
 
 ```mermaid
 %%{ init: { 'theme':'base', 'themeVariables': { 'fontFamily':'ui-monospace, SF Mono, Consolas, monospace', 'fontSize':'14px', 'primaryColor':'#0a0a0a', 'primaryTextColor':'#FFFFFF', 'primaryBorderColor':'#FFD700', 'lineColor':'#FFD700', 'clusterBkg':'transparent', 'clusterBorder':'#FFD700', 'edgeLabelBackground':'#0a0a0a' } } }%%
@@ -352,9 +289,9 @@ flowchart LR
 <!--  09  ·  RELEASE GRAPH (Mermaid gitGraph)                          -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 09 · release.history()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/09-release-history.svg" alt="09 · release.history()" width="100%"/>
+</div>
 
 ```mermaid
 %%{ init: { 'theme':'base', 'themeVariables': { 'fontFamily':'ui-monospace, SF Mono, Consolas, monospace', 'fontSize':'13px', 'git0':'#FFD700', 'git1':'#FFF8DC', 'git2':'#B8860B', 'git3':'#FF6B35', 'gitBranchLabel0':'#0a0a0a', 'gitBranchLabel1':'#0a0a0a', 'gitBranchLabel2':'#FFFFFF', 'gitBranchLabel3':'#FFFFFF', 'commitLabelColor':'#FFFFFF', 'commitLabelBackground':'#1a1a1a', 'commitLabelBorder':'#FFD700', 'tagLabelColor':'#0a0a0a', 'tagLabelBackground':'#FFD700', 'tagLabelBorder':'#B8860B', 'titleColor':'#FFFFFF' } } }%%
@@ -392,9 +329,9 @@ gitGraph
 <!--  10  ·  ALGORITHM OF THE MONTH                                    -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 10 · algorithm.of_the_month()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/10-algorithm.svg" alt="10 · algorithm.of_the_month()" width="100%"/>
+</div>
 
 <p>
   <samp><b>&gt;</b> <code>busqueda binaria adaptativa</code> &nbsp;·&nbsp; analisis formal de complejidad</samp>
@@ -464,9 +401,9 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
 <!--  11  ·  LATEST FROM DEV.TO (auto-synced)                          -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 11 · latest.posts()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/11-latest-posts.svg" alt="11 · latest.posts()" width="100%"/>
+</div>
 
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
@@ -481,9 +418,9 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
 <!--  12  ·  NOW PLAYING                                               -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 12 · now.playing()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/12-now-playing.svg" alt="12 · now.playing()" width="100%"/>
+</div>
 
 <div align="center">
   <a href="https://spotify-github-profile.kittinanx.com/api/view.svg?uid=ytp4zazw91jvaybdwrk3bshd9&redirect=true">
@@ -497,9 +434,9 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
 <!--  13  ·  HIRE ME                                                   -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
-<h2>
-  <samp>&gt; 13 · hire.me()</samp>
-</h2>
+<div align="center">
+  <img src="./assets/headers/13-hire-me.svg" alt="13 · hire.me()" width="100%"/>
+</div>
 
 <p align="center">
   <samp>

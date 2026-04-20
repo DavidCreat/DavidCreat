@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" fill="none">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:1200px;height:340px;">
+      <style>
+        .sb-wrap {
+          width: 1200px; height: 340px;
+          background: linear-gradient(135deg, #05060a 0%, #0a0d15 50%, #05060a 100%);
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          color: #e6e1cf;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 14px;
+          padding: 20px;
+          box-sizing: border-box;
+          position: relative;
+        }
+        .sb-card {
+          position: relative;
+          background: linear-gradient(160deg, rgba(255,215,0,0.04), rgba(10,10,10,0.6));
+          border: 1px solid rgba(255,215,0,0.2);
+          border-radius: 10px;
+          padding: 18px 18px 14px;
+          display: flex; flex-direction: column;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+        .sb-card::before {
+          content: '';
+          position: absolute; top: 0; left: 0; right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #ffd700, transparent);
+          animation: sbscan 4s ease-in-out infinite;
+        }
+        @keyframes sbscan {
+          0%,100% { transform: translateX(-100%); }
+          50%     { transform: translateX(100%); }
+        }
+
+        .sb-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+        .sb-tag {
+          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
+          font-size: 9px; letter-spacing: 0.3em; color: #8a7a3a;
+        }
+        .sb-dot {
+          width: 6px; height: 6px; border-radius: 50%;
+          background: #ffd700; box-shadow: 0 0 8px #ffd700;
+          animation: sbblink 1.8s ease-in-out infinite;
+        }
+        @keyframes sbblink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        .sb-title {
+          font-size: 15px; font-weight: 800;
+          background: linear-gradient(120deg, #fff8dc, #ffd700, #fff8dc);
+          background-size: 200% 200%;
+          -webkit-background-clip: text; background-clip: text;
+          color: transparent; -webkit-text-fill-color: transparent;
+          animation: sbshimmer 5s ease-in-out infinite;
+          letter-spacing: 1.5px;
+          margin: 2px 0 12px 0;
+        }
+        @keyframes sbshimmer {
+          0%,100% { background-position: 0% 50%; }
+          50%     { background-position: 100% 50%; }
+        }
+        .sb-divider {
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), transparent);
+          margin-bottom: 12px;
+        }
+
+        /* --- Card 1: Profile Details --- */
+        .pd-row { display: flex; justify-content: space-between; align-items: baseline; padding: 4px 0; font-size: 11px; }
+        .pd-row .k { color: #8a7a3a; font-family: ui-monospace, monospace; letter-spacing: 0.15em; }
+        .pd-row .v { color: #fff8dc; font-weight: 600; font-size: 12px; }
+        .pd-row .hl { color: #ffd700; }
+
+        /* --- Card 2: Repos per language (donut) --- */
+        .donut-wrap { display: flex; align-items: center; gap: 12px; }
+        .donut { position: relative; width: 90px; height: 90px; flex-shrink: 0; }
+        .donut svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        .donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .donut-center .num { font-size: 18px; font-weight: 800; color: #fff8dc; }
+        .donut-center .lbl { font-size: 8px; color: #8a7a3a; font-family: ui-monospace, monospace; letter-spacing: 0.2em; }
+        .lang-list { font-size: 10px; line-height: 1.7; flex: 1; }
+        .lang-list .li { display: flex; align-items: center; gap: 6px; }
+        .lang-list .sw { width: 8px; height: 8px; border-radius: 2px; }
+        .lang-list .name { color: #d8d3bf; flex: 1; }
+        .lang-list .pct { color: #8a7a3a; font-family: ui-monospace, monospace; font-size: 9px; }
+
+        /* --- Card 3: Most commit language (horizontal bars) --- */
+        .bar-row { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
+        .bar-row .item { display: flex; flex-direction: column; gap: 2px; }
+        .bar-row .head { display: flex; justify-content: space-between; font-size: 10px; }
+        .bar-row .n { color: #e6e1cf; font-weight: 600; }
+        .bar-row .p { color: #8a7a3a; font-family: ui-monospace, monospace; font-size: 9px; }
+        .bar-row .track { height: 6px; background: rgba(255,215,0,0.08); border-radius: 3px; overflow: hidden; }
+        .bar-row .fill {
+          height: 100%;
+          background: linear-gradient(90deg, #b8860b, #ffd700, #fff8dc);
+          border-radius: 3px;
+          box-shadow: 0 0 6px rgba(255,215,0,0.5);
+          animation: growBar 1.5s ease-out;
+        }
+        @keyframes growBar { from { width: 0%; } }
+
+        /* --- Card 4: Stats --- */
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 8px; }
+        .stat-cell { background: rgba(255,215,0,0.04); border: 1px solid rgba(255,215,0,0.15); border-radius: 6px; padding: 8px 10px; }
+        .stat-cell .val { font-size: 18px; font-weight: 800; color: #fff8dc; line-height: 1; }
+        .stat-cell .lbl { font-size: 8px; color: #8a7a3a; font-family: ui-monospace, monospace; letter-spacing: 0.2em; margin-top: 4px; }
+        .stat-cell.hot .val { background: linear-gradient(120deg, #ffd700, #fff8dc); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+
+        .sb-footer {
+          margin-top: auto;
+          padding-top: 10px;
+          font-family: ui-monospace, monospace;
+          font-size: 9px;
+          color: #b8860b;
+          letter-spacing: 0.2em;
+          border-top: 1px dashed rgba(255,215,0,0.2);
+        }
+        .sb-footer .k { color: #ffd700; }
+      </style>
+
+      <div class="sb-wrap">
+        <!-- Card 1: Profile Details -->
+        <div class="sb-card">
+          <div class="sb-head"><span class="sb-tag">▸ 01 / PROFILE</span><span class="sb-dot"></span></div>
+          <h3 class="sb-title">PROFILE DETAILS</h3>
+          <div class="sb-divider"></div>
+          <div class="pd-row"><span class="k">user</span><span class="v">@DavidCreat</span></div>
+          <div class="pd-row"><span class="k">role</span><span class="v">Full Stack</span></div>
+          <div class="pd-row"><span class="k">tz</span><span class="v">UTC −5</span></div>
+          <div class="pd-row"><span class="k">loc</span><span class="v">Ibague, CO</span></div>
+          <div class="pd-row"><span class="k">since</span><span class="v">2022</span></div>
+          <div class="pd-row"><span class="k">status</span><span class="v hl">online</span></div>
+          <div class="sb-footer"><span class="k">health ▸</span> optimal</div>
+        </div>
+
+        <!-- Card 2: Repos per Language (donut) -->
+        <div class="sb-card">
+          <div class="sb-head"><span class="sb-tag">▸ 02 / LANGUAGES</span><span class="sb-dot"></span></div>
+          <h3 class="sb-title">REPOS per LANG</h3>
+          <div class="sb-divider"></div>
+          <div class="donut-wrap">
+            <div class="donut">
+              <svg viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="rgba(255,215,0,0.08)" stroke-width="4"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#ffd700" stroke-width="4" stroke-dasharray="42 58" stroke-dashoffset="0"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#fff8dc" stroke-width="4" stroke-dasharray="28 72" stroke-dashoffset="-42"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#b8860b" stroke-width="4" stroke-dasharray="15 85" stroke-dashoffset="-70"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#8a6d00" stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-85"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#5a4a0a" stroke-width="4" stroke-dasharray="5 95" stroke-dashoffset="-95"/>
+              </svg>
+              <div class="donut-center">
+                <span class="num">30+</span>
+                <span class="lbl">REPOS</span>
+              </div>
+            </div>
+            <div class="lang-list">
+              <div class="li"><span class="sw" style="background:#ffd700"></span><span class="name">TypeScript</span><span class="pct">42%</span></div>
+              <div class="li"><span class="sw" style="background:#fff8dc"></span><span class="name">JavaScript</span><span class="pct">28%</span></div>
+              <div class="li"><span class="sw" style="background:#b8860b"></span><span class="name">HTML</span><span class="pct">15%</span></div>
+              <div class="li"><span class="sw" style="background:#8a6d00"></span><span class="name">CSS</span><span class="pct">10%</span></div>
+              <div class="li"><span class="sw" style="background:#5a4a0a"></span><span class="name">Python</span><span class="pct">5%</span></div>
+            </div>
+          </div>
+          <div class="sb-footer"><span class="k">polyglot ▸</span> 8 langs</div>
+        </div>
+
+        <!-- Card 3: Most Commit Language -->
+        <div class="sb-card">
+          <div class="sb-head"><span class="sb-tag">▸ 03 / COMMITS</span><span class="sb-dot"></span></div>
+          <h3 class="sb-title">MOST COMMIT LANG</h3>
+          <div class="sb-divider"></div>
+          <div class="bar-row">
+            <div class="item">
+              <div class="head"><span class="n">TypeScript</span><span class="p">48%</span></div>
+              <div class="track"><div class="fill" style="width:48%"></div></div>
+            </div>
+            <div class="item">
+              <div class="head"><span class="n">JavaScript</span><span class="p">24%</span></div>
+              <div class="track"><div class="fill" style="width:24%"></div></div>
+            </div>
+            <div class="item">
+              <div class="head"><span class="n">HTML</span><span class="p">14%</span></div>
+              <div class="track"><div class="fill" style="width:14%"></div></div>
+            </div>
+            <div class="item">
+              <div class="head"><span class="n">CSS</span><span class="p">9%</span></div>
+              <div class="track"><div class="fill" style="width:9%"></div></div>
+            </div>
+            <div class="item">
+              <div class="head"><span class="n">Python</span><span class="p">5%</span></div>
+              <div class="track"><div class="fill" style="width:5%"></div></div>
+            </div>
+          </div>
+          <div class="sb-footer"><span class="k">top ▸</span> TypeScript</div>
+        </div>
+
+        <!-- Card 4: Overall Stats -->
+        <div class="sb-card">
+          <div class="sb-head"><span class="sb-tag">▸ 04 / TOTALS</span><span class="sb-dot"></span></div>
+          <h3 class="sb-title">OVERALL STATS</h3>
+          <div class="sb-divider"></div>
+          <div class="stats-grid">
+            <div class="stat-cell hot">
+              <div class="val">1.2K+</div>
+              <div class="lbl">COMMITS</div>
+            </div>
+            <div class="stat-cell">
+              <div class="val">80+</div>
+              <div class="lbl">PULL REQS</div>
+            </div>
+            <div class="stat-cell">
+              <div class="val">45+</div>
+              <div class="lbl">ISSUES</div>
+            </div>
+            <div class="stat-cell">
+              <div class="val">15+</div>
+              <div class="lbl">STARS</div>
+            </div>
+            <div class="stat-cell">
+              <div class="val">30+</div>
+              <div class="lbl">REPOS</div>
+            </div>
+            <div class="stat-cell hot">
+              <div class="val">50+</div>
+              <div class="lbl">FOLLOWERS</div>
+            </div>
+          </div>
+          <div class="sb-footer"><span class="k">streak ▸</span> active</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

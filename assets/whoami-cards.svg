@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" fill="none">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:1200px;height:440px;">
+      <style>
+        .wcwrap {
+          width: 1200px; height: 440px;
+          background:
+            radial-gradient(900px 440px at 50% 50%, rgba(255,215,0,0.06), transparent 60%),
+            linear-gradient(135deg, #05060a 0%, #0a0d15 50%, #05060a 100%);
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          color: #e6e1cf;
+          display: flex;
+          align-items: stretch;
+          padding: 28px;
+          box-sizing: border-box;
+          gap: 20px;
+          position: relative;
+        }
+
+        /* subtle grid backdrop */
+        .wcwrap::before {
+          content: '';
+          position: absolute; inset: 0;
+          background-image:
+            linear-gradient(rgba(255,215,0,0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,215,0,0.05) 1px, transparent 1px);
+          background-size: 40px 40px;
+          mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%);
+        }
+
+        .card {
+          position: relative;
+          flex: 1;
+          background: linear-gradient(160deg, rgba(255,215,0,0.04) 0%, rgba(10,10,10,0.6) 60%);
+          border: 1px solid rgba(255,215,0,0.2);
+          border-radius: 10px;
+          padding: 24px 22px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          backdrop-filter: blur(4px);
+        }
+
+        /* animated border shine */
+        .card::before {
+          content: '';
+          position: absolute; inset: -1px;
+          border-radius: 10px;
+          padding: 1px;
+          background: linear-gradient(135deg, transparent 30%, rgba(255,215,0,0.6) 50%, transparent 70%);
+          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          -webkit-mask-composite: xor;
+                  mask-composite: exclude;
+          opacity: 0.5;
+          animation: borderShine 6s linear infinite;
+        }
+        @keyframes borderShine {
+          0%   { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+
+        .ch-top {
+          display: flex; justify-content: space-between; align-items: center;
+          margin-bottom: 14px;
+        }
+        .ch-num {
+          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
+          font-size: 11px; letter-spacing: 0.35em;
+          color: #8a7a3a;
+        }
+        .ch-dot {
+          width: 8px; height: 8px; border-radius: 50%;
+          background: #ffd700;
+          box-shadow: 0 0 10px #ffd700;
+          animation: blink 1.8s ease-in-out infinite;
+        }
+        @keyframes blink {
+          0%,100% { opacity: 1; transform: scale(1); }
+          50%     { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        .ch-title {
+          font-size: 26px; font-weight: 800;
+          color: #fff8dc;
+          letter-spacing: 2px;
+          margin: 0 0 4px 0;
+          background: linear-gradient(120deg, #fff8dc 0%, #ffd700 50%, #fff8dc 100%);
+          background-size: 200% 200%;
+          -webkit-background-clip: text; background-clip: text;
+          color: transparent; -webkit-text-fill-color: transparent;
+          animation: shimmer 5s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+          0%,100% { background-position: 0% 50%; }
+          50%     { background-position: 100% 50%; }
+        }
+
+        .ch-subtitle {
+          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
+          font-size: 10px; letter-spacing: 0.3em;
+          color: #b8860b;
+          text-transform: uppercase;
+          margin-bottom: 18px;
+        }
+
+        .divider {
+          width: 100%; height: 1px;
+          background: linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.4) 50%, transparent 100%);
+          margin: 4px 0 16px 0;
+        }
+
+        .body {
+          font-size: 13px;
+          line-height: 1.7;
+          color: #d8d3bf;
+          flex: 1;
+        }
+        .body b { color: #fff8dc; font-weight: 700; }
+        .tag {
+          display: inline-block;
+          padding: 2px 8px;
+          background: rgba(255,215,0,0.1);
+          border: 1px solid rgba(255,215,0,0.35);
+          border-radius: 4px;
+          color: #ffd700;
+          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
+          font-size: 11px;
+          font-weight: 600;
+          margin: 0 2px;
+        }
+
+        .ilist { list-style: none; padding: 0; margin: 0; }
+        .ilist li {
+          display: flex; align-items: baseline; gap: 10px;
+          padding: 6px 0;
+          font-size: 13px;
+          color: #d8d3bf;
+        }
+        .ilist .arrow {
+          color: #ffd700; font-family: ui-monospace, monospace;
+          font-weight: 700; font-size: 12px;
+        }
+        .ilist .label {
+          color: #8a7a3a; font-family: ui-monospace, monospace;
+          font-size: 11px; letter-spacing: 0.12em;
+          width: 42px; display: inline-block;
+        }
+
+        .footer-line {
+          margin-top: auto;
+          padding-top: 14px;
+          border-top: 1px dashed rgba(255,215,0,0.2);
+          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
+          font-size: 11px;
+          color: #b8860b;
+          letter-spacing: 0.1em;
+        }
+        .footer-line .k { color: #ffd700; font-weight: 700; }
+
+        /* corner decorations */
+        .corn {
+          position: absolute; width: 12px; height: 12px;
+          border: 2px solid #ffd700;
+          opacity: 0.6;
+        }
+        .c-tl { top: -1px; left: -1px; border-right: 0; border-bottom: 0; border-top-left-radius: 10px; }
+        .c-tr { top: -1px; right: -1px; border-left: 0; border-bottom: 0; border-top-right-radius: 10px; }
+        .c-bl { bottom: -1px; left: -1px; border-right: 0; border-top: 0; border-bottom-left-radius: 10px; }
+        .c-br { bottom: -1px; right: -1px; border-left: 0; border-top: 0; border-bottom-right-radius: 10px; }
+      </style>
+
+      <div class="wcwrap">
+        <!-- Card 01: SNAPSHOT -->
+        <div class="card">
+          <span class="corn c-tl"></span><span class="corn c-tr"></span>
+          <span class="corn c-bl"></span><span class="corn c-br"></span>
+
+          <div class="ch-top">
+            <span class="ch-num">▸ 01 / SNAPSHOT</span>
+            <span class="ch-dot"></span>
+          </div>
+          <h2 class="ch-title">SNAPSHOT</h2>
+          <div class="ch-subtitle">who.am.i()</div>
+          <div class="divider"></div>
+
+          <div class="body">
+            Arquitecto <b>Full Stack</b> con obsesion por <span class="tag">DX</span>, sistemas distribuidos y experiencias web que se sienten instantaneas.
+            <br/><br/>
+            Diseño <span class="tag">APIs tipadas</span> end-to-end, pipelines <span class="tag">CI/CD</span> idempotentes y <b>UIs</b> que respetan al usuario.
+          </div>
+
+          <div class="footer-line"><span class="k">mindset ▸</span> build · ship · iterate</div>
+        </div>
+
+        <!-- Card 02: CURRENTLY -->
+        <div class="card">
+          <span class="corn c-tl"></span><span class="corn c-tr"></span>
+          <span class="corn c-bl"></span><span class="corn c-br"></span>
+
+          <div class="ch-top">
+            <span class="ch-num">▸ 02 / CURRENTLY</span>
+            <span class="ch-dot"></span>
+          </div>
+          <h2 class="ch-title">CURRENTLY</h2>
+          <div class="ch-subtitle">active.streams()</div>
+          <div class="divider"></div>
+
+          <ul class="ilist">
+            <li><span class="arrow">▸</span><span class="label">SHIP</span><span>en <b>eas1.com.es</b></span></li>
+            <li><span class="arrow">▸</span><span class="label">LEARN</span><span>edge runtimes &amp; <b>AI agents</b></span></li>
+            <li><span class="arrow">▸</span><span class="label">EXPLR</span><span><b>Rust</b> &amp; <b>WebGPU</b></span></li>
+            <li><span class="arrow">▸</span><span class="label">TEACH</span><span><b>devs junior</b> en LATAM</span></li>
+          </ul>
+
+          <div class="footer-line"><span class="k">status ▸</span> available for hire</div>
+        </div>
+
+        <!-- Card 03: FIND ME -->
+        <div class="card">
+          <span class="corn c-tl"></span><span class="corn c-tr"></span>
+          <span class="corn c-bl"></span><span class="corn c-br"></span>
+
+          <div class="ch-top">
+            <span class="ch-num">▸ 03 / FIND ME</span>
+            <span class="ch-dot"></span>
+          </div>
+          <h2 class="ch-title">FIND ME</h2>
+          <div class="ch-subtitle">contact.channels()</div>
+          <div class="divider"></div>
+
+          <ul class="ilist">
+            <li><span class="arrow">▸</span><span class="label">WEB</span><span><b>eas1.com.es</b></span></li>
+            <li><span class="arrow">▸</span><span class="label">BLOG</span><span><b>dev.to/davidcreat</b></span></li>
+            <li><span class="arrow">▸</span><span class="label">MAIL</span><span><b>david.fonseca12p@gmail.com</b></span></li>
+            <li><span class="arrow">▸</span><span class="label">GEO</span><span><b>Ibague, Tolima</b> · UTC−5</span></li>
+          </ul>
+
+          <div class="footer-line"><span class="k">uptime ▸</span> 24 / 7</div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
