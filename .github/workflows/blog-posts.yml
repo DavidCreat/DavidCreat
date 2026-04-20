@@ -2,7 +2,7 @@ name: Sync Latest Dev.to Posts
 
 on:
   schedule:
-    # Re-run every 6 hours
+    # Se ejecuta cada 6 horas
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
@@ -15,9 +15,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      # Sondeamos el feed antes de invocar la accion de sincronizacion.
+      # Dev.to responde 404 en /feed/<usuario> cuando el autor aun no tiene
+      # articulos publicados, lo que provoca que gautamkrishnar/blog-post-workflow
+      # termine en estado fallido. En ese caso saltamos el paso de forma limpia
+      # para que el job programado siga en verde hasta que se publique el
+      # primer articulo; a partir de ese momento se auto-sincronizara en la
+      # siguiente corrida programada.
+      - name: Sondear feed de Dev.to
+        id: probe
+        run: |
+          status=$(curl -sS -o /dev/null -w "%{http_code}" "https://dev.to/feed/davidcreat" || echo "000")
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          if [ "$status" = "200" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Feed Dev.to::Feed disponible (HTTP 200). Continuando con la sincronizacion."
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Feed Dev.to::Feed respondio HTTP $status. Se omite la sincronizacion (aun sin articulos publicados)."
+          fi
 
       - name: Pull latest posts
+        if: steps.probe.outputs.available == 'true'
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           feed_list: "https://dev.to/feed/davidcreat"
