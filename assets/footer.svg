@@ -1,0 +1,200 @@
+<svg fill="none" viewBox="0 0 1200 200" width="1200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:1200px;height:200px;">
+      <style>
+        .fwrap {
+          position: relative;
+          width: 1200px;
+          height: 200px;
+          overflow: hidden;
+          background:
+            radial-gradient(800px 200px at 80% 100%, rgba(255,215,0,0.18), transparent 60%),
+            radial-gradient(900px 200px at 15% 0%, rgba(184,134,11,0.22), transparent 60%),
+            linear-gradient(135deg, #05060a 0%, #0b0e17 50%, #070812 100%);
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          color: #f7f3e3;
+        }
+
+        /* animated grid */
+        .fgrid {
+          position: absolute; inset: 0;
+          background-image:
+            linear-gradient(rgba(255,215,0,0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,215,0,0.08) 1px, transparent 1px);
+          background-size: 30px 30px;
+          mask-image: radial-gradient(ellipse 80% 100% at 50% 50%, #000 30%, transparent 80%);
+          animation: fdrift 14s linear infinite;
+        }
+        @keyframes fdrift {
+          from { background-position: 0 0, 0 0; }
+          to   { background-position: 30px 30px, 30px 30px; }
+        }
+
+        /* horizon line */
+        .horizon {
+          position: absolute;
+          left: 0; right: 0; top: 50%;
+          height: 1px;
+          background: linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.6) 50%, transparent 100%);
+        }
+
+        /* floating dots */
+        .fdot {
+          position: absolute;
+          width: 3px; height: 3px; border-radius: 50%;
+          background: #ffd700;
+          box-shadow: 0 0 10px #ffd700, 0 0 20px rgba(255,215,0,0.6);
+        }
+        .fd1 { top: 22%; left: 12%; animation: ffloat 7s ease-in-out infinite; }
+        .fd2 { top: 68%; left: 26%; animation: ffloat 9s ease-in-out infinite 1s; }
+        .fd3 { top: 30%; left: 82%; animation: ffloat 8s ease-in-out infinite 2s; }
+        .fd4 { top: 72%; left: 90%; animation: ffloat 10s ease-in-out infinite 0.5s; }
+        @keyframes ffloat {
+          0%,100% { transform: translateY(0) scale(1); opacity: 0.7; }
+          50%     { transform: translateY(-18px) scale(1.5); opacity: 1; }
+        }
+
+        /* content flex row */
+        .fcontent {
+          position: absolute; inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 60px;
+          z-index: 2;
+        }
+
+        .fleft { display: flex; flex-direction: column; }
+
+        .ftag {
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+          font-size: 11px;
+          letter-spacing: 0.4em;
+          color: #ffd700;
+          text-transform: uppercase;
+        }
+        .ftag::before {
+          content: ''; display: inline-block;
+          width: 22px; height: 1px;
+          background: #ffd700; vertical-align: middle;
+          margin-right: 12px;
+        }
+
+        .fname {
+          font-weight: 800;
+          font-size: 56px;
+          line-height: 1;
+          letter-spacing: -0.03em;
+          margin: 8px 0 0 0;
+          background: linear-gradient(120deg, #fff8dc 0%, #ffd700 35%, #fff8dc 55%, #b8860b 75%, #ffd700 100%);
+          background-size: 300% 300%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          -webkit-text-fill-color: transparent;
+          filter: drop-shadow(0 0 14px rgba(255,215,0,0.4));
+          animation: fshimmer 6s ease-in-out infinite;
+        }
+        @keyframes fshimmer {
+          0%,100% { background-position: 0% 50%; }
+          50%     { background-position: 100% 50%; }
+        }
+
+        .frole {
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+          font-size: 13px;
+          color: #e6e1cf;
+          margin-top: 10px;
+          letter-spacing: 0.05em;
+        }
+        .frole .b { color: #ffd700; font-weight: 700; }
+
+        /* right panel: signature + system status */
+        .fright {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          text-align: right;
+        }
+
+        .fsig {
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+          font-size: 11px;
+          letter-spacing: 0.28em;
+          color: #ffd700;
+          text-transform: uppercase;
+        }
+        .fsig .pulse {
+          display: inline-block;
+          width: 7px; height: 7px;
+          border-radius: 50%;
+          background: #ffd700;
+          box-shadow: 0 0 10px #ffd700;
+          margin-right: 10px;
+          vertical-align: middle;
+          animation: fblink 1.8s ease-in-out infinite;
+        }
+        @keyframes fblink {
+          0%,100% { opacity: 1; transform: scale(1); }
+          50%     { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        .fquote {
+          font-style: italic;
+          font-size: 12px;
+          color: #b8a76a;
+          margin-top: 12px;
+          max-width: 380px;
+        }
+
+        .fmeta {
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+          font-size: 10px;
+          letter-spacing: 0.25em;
+          color: #8a7a3a;
+          margin-top: 10px;
+        }
+        .fmeta .dot { color: #ffd700; }
+
+        /* corner brackets */
+        .fcorner {
+          position: absolute; width: 22px; height: 22px;
+          border: 2px solid #ffd700;
+        }
+        .ftl { top: 16px; left: 16px; border-right: 0; border-bottom: 0; }
+        .ftr { top: 16px; right: 16px; border-left: 0; border-bottom: 0; }
+        .fbl { bottom: 16px; left: 16px; border-right: 0; border-top: 0; }
+        .fbr { bottom: 16px; right: 16px; border-left: 0; border-top: 0; }
+      </style>
+
+      <div class="fwrap">
+        <div class="fgrid"></div>
+        <div class="horizon"></div>
+
+        <span class="fcorner ftl"></span>
+        <span class="fcorner ftr"></span>
+        <span class="fcorner fbl"></span>
+        <span class="fcorner fbr"></span>
+
+        <span class="fdot fd1"></span>
+        <span class="fdot fd2"></span>
+        <span class="fdot fd3"></span>
+        <span class="fdot fd4"></span>
+
+        <div class="fcontent">
+          <div class="fleft">
+            <div class="ftag">END OF TRANSMISSION</div>
+            <h1 class="fname">David Fonseca</h1>
+            <div class="frole"><span class="b">&lt;/&gt;</span> Full Stack Architect &amp; DevOps Engineer</div>
+          </div>
+
+          <div class="fright">
+            <div class="fsig"><span class="pulse"></span>SYSTEM ONLINE</div>
+            <div class="fquote">"El mejor codigo es el que nunca tuviste que explicar."</div>
+            <div class="fmeta">V2026.04 <span class="dot">·</span> IBAGUE, CO <span class="dot">·</span> MIT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

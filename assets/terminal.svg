@@ -123,7 +123,7 @@
           <span class="line l2"><span class="out">{</span></span>
           <span class="line l3"><span class="out">  </span><span class="key">"name"</span><span class="out">: </span><span class="str">"David Fonseca"</span><span class="out">,</span></span>
           <span class="line l4"><span class="out">  </span><span class="key">"role"</span><span class="out">: </span><span class="str">"Full Stack Architect &amp; DevOps"</span><span class="out">,</span></span>
-          <span class="line l5"><span class="out">  </span><span class="key">"location"</span><span class="out">: </span><span class="str">"Bogota, Colombia"</span><span class="out">,</span></span>
+          <span class="line l5"><span class="out">  </span><span class="key">"location"</span><span class="out">: </span><span class="str">"Ibague, Tolima, Colombia"</span><span class="out">,</span></span>
           <span class="line l6"><span class="out">  </span><span class="key">"focus"</span><span class="out">: [</span><span class="str">"TypeScript"</span><span class="out">, </span><span class="str">"Cloud Native"</span><span class="out">, </span><span class="str">"DX"</span><span class="out">],</span></span>
           <span class="line l7"><span class="out">  </span><span class="key">"shipping"</span><span class="out">: </span><span class="num">24</span><span class="out"> x </span><span class="num">7</span><span class="out">,</span></span>
           <span class="line l8"><span class="out">  </span><span class="key">"coffee_per_day"</span><span class="out">: </span><span class="num">3.14</span><span class="out">,</span></span>

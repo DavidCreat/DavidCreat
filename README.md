@@ -31,14 +31,6 @@
 
 <br/>
 
-> [!IMPORTANT]
-> **Este README se construye a si mismo.** Mientras lees, tres workflows de GitHub Actions estan corriendo en background: uno regenera la animacion de la serpiente comiendose mis contribuciones, otro reconstruye el grafo 3D de actividad, y otro sincroniza mis ultimos articulos de Dev.to. Lo que ves siempre esta vivo.
-
-> [!TIP]
-> Si quieres saber **como esta hecho** cada efecto, abre el `README.md` en modo raw. No hay trucos: es SVG + CSS + SMIL + Actions, todo compatible con el renderer oficial de GitHub.
-
-<br/>
-
 <!-- ════════════════════════════════════════════════════════════════ -->
 <!--  01  ·  WHOAMI                                                    -->
 <!-- ════════════════════════════════════════════════════════════════ -->
@@ -51,34 +43,70 @@
   <img src="./assets/terminal.svg" alt="Terminal — whoami" width="85%" />
 </div>
 
-<table align="center">
+<table align="center" width="100%">
   <tr>
-    <td valign="top" width="33%">
-      <h3 align="center"><samp>· SNAPSHOT ·</samp></h3>
-      <p align="left">
-        <samp>
-        Arquitecto Full Stack con obsesion por <b>DX</b>, sistemas distribuidos y experiencias web que se sienten instantaneas.
-        Diseño APIs tipadas end-to-end, pipelines CI/CD idempotentes y UIs que respetan al usuario.
-        </samp>
-      </p>
+    <td valign="top" width="34%">
+      <samp>
+        <b>┌─── 01 ─────────────────┐</b><br/>
+        <b>│&nbsp;&nbsp;&nbsp;▸ SNAPSHOT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</b><br/>
+        <b>└────────────────────────┘</b>
+      </samp>
+      <br/><br/>
+      Arquitecto Full Stack con obsesion por <kbd>DX</kbd>, sistemas distribuidos y experiencias web que se sienten instantaneas.
+      <br/><br/>
+      Diseño <kbd>APIs tipadas end-to-end</kbd>, pipelines <kbd>CI/CD</kbd> idempotentes, y <kbd>UIs</kbd> que respetan al usuario.
+      <br/><br/>
+      <samp>
+        <code>mindset ▸</code> <b>build · ship · iterate</b>
+      </samp>
     </td>
-    <td valign="top" width="33%">
-      <h3 align="center"><samp>· CURRENTLY ·</samp></h3>
-      <ul>
-        <li><samp>Shipping en <b>eas1.com.es</b></samp></li>
-        <li><samp>Explorando <b>edge runtimes</b> &amp; <b>AI agents</b></samp></li>
-        <li><samp>Aprendiendo <b>Rust</b> &amp; <b>WebGPU</b></samp></li>
-        <li><samp>Mentoreando <b>devs junior</b> en LATAM</samp></li>
-      </ul>
+    <td width="1%" valign="top">
+      <samp>
+        <br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│
+      </samp>
     </td>
-    <td valign="top" width="33%">
-      <h3 align="center"><samp>· FIND ME ·</samp></h3>
-      <ul>
-        <li><samp><a href="https://eas1.com.es">eas1.com.es</a></samp></li>
-        <li><samp><a href="https://dev.to/davidcreat">dev.to/davidcreat</a></samp></li>
-        <li><samp><a href="mailto:david.fonseca12p@gmail.com">david.fonseca12p@gmail.com</a></samp></li>
-        <li><samp>Bogota · UTC−5</samp></li>
-      </ul>
+    <td valign="top" width="32%">
+      <samp>
+        <b>┌─── 02 ─────────────────┐</b><br/>
+        <b>│&nbsp;&nbsp;&nbsp;▸ CURRENTLY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</b><br/>
+        <b>└────────────────────────┘</b>
+      </samp>
+      <br/><br/>
+      <samp><code>▸</code></samp> Shipping en <kbd>eas1.com.es</kbd>
+      <br/><br/>
+      <samp><code>▸</code></samp> Explorando <kbd>edge runtimes</kbd> &amp; <kbd>AI agents</kbd>
+      <br/><br/>
+      <samp><code>▸</code></samp> Aprendiendo <kbd>Rust</kbd> &amp; <kbd>WebGPU</kbd>
+      <br/><br/>
+      <samp><code>▸</code></samp> Mentoreando <kbd>devs junior</kbd> en LATAM
+      <br/><br/>
+      <samp>
+        <code>status ▸</code> <b>available for hire</b>
+      </samp>
+    </td>
+    <td width="1%" valign="top">
+      <samp>
+        <br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│<br/>│
+      </samp>
+    </td>
+    <td valign="top" width="32%">
+      <samp>
+        <b>┌─── 03 ─────────────────┐</b><br/>
+        <b>│&nbsp;&nbsp;&nbsp;▸ FIND ME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│</b><br/>
+        <b>└────────────────────────┘</b>
+      </samp>
+      <br/><br/>
+      <samp><code>web&nbsp;&nbsp;▸</code></samp> <a href="https://eas1.com.es"><kbd>eas1.com.es</kbd></a>
+      <br/><br/>
+      <samp><code>blog ▸</code></samp> <a href="https://dev.to/davidcreat"><kbd>dev.to/davidcreat</kbd></a>
+      <br/><br/>
+      <samp><code>mail ▸</code></samp> <a href="mailto:david.fonseca12p@gmail.com"><kbd>david.fonseca12p@gmail.com</kbd></a>
+      <br/><br/>
+      <samp><code>geo&nbsp;&nbsp;▸</code></samp> <kbd>Ibague, Tolima</kbd> · <samp>UTC−5</samp>
+      <br/><br/>
+      <samp>
+        <code>uptime ▸</code> <b>24 / 7</b>
+      </samp>
     </td>
   </tr>
 </table>
@@ -97,45 +125,74 @@
   <img src="./assets/constellation.svg" alt="Tech Constellation — orbital map of skills" width="100%" />
 </div>
 
-<table align="center">
+<table align="center" width="100%">
   <tr>
-    <th align="left"><samp>TIER</samp></th>
-    <th align="left"><samp>DOMAIN</samp></th>
-    <th align="left"><samp>BATTLE-TESTED</samp></th>
-  </tr>
-  <tr>
-    <td><samp><b>I</b></samp></td>
-    <td><samp>Frontend</samp></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=ts,react,nextjs,vue,nuxtjs,angular,tailwind,sass&theme=dark" height="32"/>
+    <td align="center" width="18%" valign="middle">
+      <img src="https://img.shields.io/badge/TIER%20I-FFD700?style=for-the-badge&labelColor=0a0a0a&color=FFD700" height="28"/>
+    </td>
+    <td width="32%" valign="middle">
+      <b>Frontend Stack</b>
+      <br/>
+      <sub><samp>user-facing · SPA · SSR · design-systems</samp></sub>
+    </td>
+    <td width="50%" align="center" valign="middle">
+      <img src="https://skillicons.dev/icons?i=ts,react,nextjs,vue,nuxtjs,angular,tailwind,sass&theme=dark" height="36"/>
     </td>
   </tr>
+  <tr><td colspan="3"><sub>&nbsp;</sub></td></tr>
   <tr>
-    <td><samp><b>II</b></samp></td>
-    <td><samp>Backend &amp; APIs</samp></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,graphql,bun,deno,fastapi,go&theme=dark" height="32"/>
+    <td align="center" valign="middle">
+      <img src="https://img.shields.io/badge/TIER%20II-FFD700?style=for-the-badge&labelColor=0a0a0a&color=FFD700" height="28"/>
+    </td>
+    <td valign="middle">
+      <b>Backend &amp; APIs</b>
+      <br/>
+      <sub><samp>services · typed contracts · real-time</samp></sub>
+    </td>
+    <td align="center" valign="middle">
+      <img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,graphql,bun,deno,fastapi,go&theme=dark" height="36"/>
     </td>
   </tr>
+  <tr><td colspan="3"><sub>&nbsp;</sub></td></tr>
   <tr>
-    <td><samp><b>III</b></samp></td>
-    <td><samp>Data Engines</samp></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,prisma,supabase&theme=dark" height="32"/>
+    <td align="center" valign="middle">
+      <img src="https://img.shields.io/badge/TIER%20III-FFD700?style=for-the-badge&labelColor=0a0a0a&color=FFD700" height="28"/>
+    </td>
+    <td valign="middle">
+      <b>Data Engines</b>
+      <br/>
+      <sub><samp>SQL · NoSQL · cache · ORM</samp></sub>
+    </td>
+    <td align="center" valign="middle">
+      <img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,prisma,supabase&theme=dark" height="36"/>
     </td>
   </tr>
+  <tr><td colspan="3"><sub>&nbsp;</sub></td></tr>
   <tr>
-    <td><samp><b>IV</b></samp></td>
-    <td><samp>Cloud &amp; DevOps</samp></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,gcp,terraform,githubactions,nginx,linux&theme=dark" height="32"/>
+    <td align="center" valign="middle">
+      <img src="https://img.shields.io/badge/TIER%20IV-FFD700?style=for-the-badge&labelColor=0a0a0a&color=FFD700" height="28"/>
+    </td>
+    <td valign="middle">
+      <b>Cloud &amp; DevOps</b>
+      <br/>
+      <sub><samp>IaC · containers · CI/CD · observability</samp></sub>
+    </td>
+    <td align="center" valign="middle">
+      <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,gcp,terraform,githubactions,nginx,linux&theme=dark" height="36"/>
     </td>
   </tr>
+  <tr><td colspan="3"><sub>&nbsp;</sub></td></tr>
   <tr>
-    <td><samp><b>V</b></samp></td>
-    <td><samp>Tooling &amp; AI</samp></td>
-    <td>
-      <img src="https://skillicons.dev/icons?i=git,vscode,figma,vite,vitest,jest,py,tensorflow&theme=dark" height="32"/>
+    <td align="center" valign="middle">
+      <img src="https://img.shields.io/badge/TIER%20V-FFD700?style=for-the-badge&labelColor=0a0a0a&color=FFD700" height="28"/>
+    </td>
+    <td valign="middle">
+      <b>Tooling &amp; AI</b>
+      <br/>
+      <sub><samp>dev-loop · testing · design · ML</samp></sub>
+    </td>
+    <td align="center" valign="middle">
+      <img src="https://skillicons.dev/icons?i=git,vscode,figma,vite,vitest,jest,py,tensorflow&theme=dark" height="36"/>
     </td>
   </tr>
 </table>
@@ -169,7 +226,7 @@
     <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=DavidCreat&layout=compact&theme=transparent&title_color=8A6D00&text_color=1a1a1a&hide_border=true&langs_count=10&card_width=450"/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DavidCreat&layout=compact&theme=transparent&title_color=FFD700&text_color=E6E1CF&hide_border=true&langs_count=10&card_width=450" height="195" alt="Top Languages"/>
   </picture>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=DavidCreat&theme=nord_dark&utcOffset=-5" height="195" alt="Productive Time"/>
+  <img src="./assets/productive-hours.svg" height="195" alt="Productive Time"/>
 </div>
 
 <br/>
@@ -191,32 +248,11 @@
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  05  ·  3D CONTRIBUTION GRAPH (auto-generated)                    -->
+<!--  05  ·  SNAKE (auto-generated)                                    -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 05 · contributions.render3D()</samp>
-</h2>
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg"/>
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season-animate.svg"/>
-    <img src="./profile-3d-contrib/profile-season-animate.svg" alt="3D Contribution Graph" width="100%"/>
-  </picture>
-</div>
-
-> [!NOTE]
-> Si esta imagen aun no carga es porque el workflow `3d-contrib.yml` se ejecuta la **primera vez** que hagas push a `main` o manualmente desde la pestaña Actions. Despues se regenera cada dia automaticamente.
-
-<br/>
-
-<!-- ════════════════════════════════════════════════════════════════ -->
-<!--  06  ·  SNAKE (auto-generated)                                    -->
-<!-- ════════════════════════════════════════════════════════════════ -->
-
-<h2>
-  <samp>&gt; 06 · snake.eat(contributions)</samp>
+  <samp>&gt; 05 · snake.eat(contributions)</samp>
 </h2>
 
 <picture>
@@ -228,27 +264,34 @@
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  07  ·  TROPHIES                                                  -->
+<!--  06  ·  TROPHIES + PROFILE CARDS                                  -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 07 · achievements.unlocked()</samp>
+  <samp>&gt; 06 · achievements.unlocked()</samp>
 </h2>
 
 <div align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=DavidCreat&theme=onedark&no-frame=true&no-bg=true&column=7&margin-w=10&margin-h=10&title=Commits,Repositories,Stars,Followers,PullRequest,Issues,Reviews,MultiLanguage" alt="Trophies" width="100%"/>
+    <img src="https://github-profile-trophy.vercel.app/?username=DavidCreat&theme=onedark&no-frame=true&no-bg=true&row=1&column=7&margin-w=10&margin-h=10" alt="Trophies" width="100%"/>
   </a>
+</div>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=DavidCreat&theme=nord_dark" height="170" alt="Profile Details"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=DavidCreat&theme=nord_dark" height="170" alt="Repos per Language"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=DavidCreat&theme=nord_dark" height="170" alt="Most Commit Language"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=DavidCreat&theme=nord_dark" height="170" alt="Stats"/>
 </div>
 
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  08  ·  PINNED                                                    -->
+<!--  07  ·  PINNED                                                    -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 08 · pinned.repositories()</samp>
+  <samp>&gt; 07 · pinned.repositories()</samp>
 </h2>
 
 <div align="center">
@@ -269,77 +312,93 @@
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  09  ·  CAREER TIMELINE (Mermaid)                                 -->
+<!--  08  ·  CAREER TIMELINE (Mermaid)                                 -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 09 · career.timeline()</samp>
+  <samp>&gt; 08 · career.timeline()</samp>
 </h2>
 
 ```mermaid
-%%{ init: { 'theme':'base', 'themeVariables': { 'primaryColor':'#FFD700','primaryTextColor':'#0a0a0a','primaryBorderColor':'#B8860B','lineColor':'#FFD700','secondaryColor':'#1a1a1a','tertiaryColor':'#0a0a0a','background':'transparent','mainBkg':'#FFD700','secondBkg':'#1a1a1a','cScale0':'#FFD700','cScale1':'#B8860B','cScale2':'#FFF8DC' } } }%%
-timeline
-    title Trayectoria Profesional
-    section Fundamentos
-        HTML CSS JS         : Primeros pasos : Landing pages
-        Bootcamp FullStack  : Node.js        : React.js      : SQL
-    section Crecimiento
-        Freelance Web       : Clientes LATAM : SaaS MVPs
-        React Avanzado      : TypeScript     : Next.js       : Performance
-    section Especializacion
-        Arquitectura Cloud  : AWS            : GCP           : Kubernetes
-        DevOps y CI CD      : GitHub Actions : Terraform     : Observability
-    section 2026
-        Full Stack Architect : eas1.com.es
-        AI y Edge Runtimes   : Agents        : WebGPU        : Rust
+%%{ init: { 'theme':'base', 'themeVariables': { 'fontFamily':'ui-monospace, SF Mono, Consolas, monospace', 'fontSize':'14px', 'primaryColor':'#0a0a0a', 'primaryTextColor':'#FFFFFF', 'primaryBorderColor':'#FFD700', 'lineColor':'#FFD700', 'clusterBkg':'transparent', 'clusterBorder':'#FFD700', 'edgeLabelBackground':'#0a0a0a' } } }%%
+flowchart LR
+    classDef year       fill:#FFD700,color:#0a0a0a,stroke:#B8860B,stroke-width:2px,font-weight:bold
+    classDef milestone  fill:#0a0a0a,color:#FFFFFF,stroke:#FFD700,stroke-width:1.5px
+    classDef highlight  fill:#1a1a1a,color:#FFD700,stroke:#FFD700,stroke-width:2px,font-weight:bold
+
+    Y1["2022"]:::year --> M1["HTML · CSS · JS"]:::milestone
+    M1 --> M2["Bootcamp<br/>Full Stack"]:::milestone
+    M2 --> Y2
+
+    Y2["2023"]:::year --> M3["React · Node<br/>fesc-student-agenda"]:::milestone
+    M3 --> M4["TypeScript<br/>API Rest"]:::milestone
+    M4 --> Y3
+
+    Y3["2024"]:::year --> M5["Next.js · Vue<br/>Sistema de Gestion"]:::milestone
+    M5 --> M6["MongoDB · Redis<br/>GraphQL"]:::milestone
+    M6 --> Y4
+
+    Y4["2025"]:::year --> M7["Docker · K8s<br/>AWS · GCP"]:::milestone
+    M7 --> M8["CI CD · Terraform<br/>eas1.com.es"]:::milestone
+    M8 --> Y5
+
+    Y5["2026"]:::year --> M9["AI Agents<br/>Edge Runtimes"]:::highlight
+    M9 --> M10["WebGPU · Rust<br/>Full Stack Architect"]:::highlight
 ```
 
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  10  ·  RELEASE GRAPH (Mermaid gitGraph)                          -->
+<!--  09  ·  RELEASE GRAPH (Mermaid gitGraph)                          -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 10 · release.history()</samp>
+  <samp>&gt; 09 · release.history()</samp>
 </h2>
 
 ```mermaid
-%%{ init: { 'theme':'base', 'themeVariables': { 'git0':'#FFD700','git1':'#FFF8DC','git2':'#B8860B','git3':'#8A6D00','gitBranchLabel0':'#0a0a0a','gitBranchLabel1':'#0a0a0a','gitBranchLabel2':'#0a0a0a','gitBranchLabel3':'#FFF8DC','commitLabelColor':'#E6E1CF','commitLabelBackground':'transparent','tagLabelColor':'#0a0a0a','tagLabelBackground':'#FFD700','tagLabelBorder':'#B8860B' } } }%%
+%%{ init: { 'theme':'base', 'themeVariables': { 'fontFamily':'ui-monospace, SF Mono, Consolas, monospace', 'fontSize':'13px', 'git0':'#FFD700', 'git1':'#FFF8DC', 'git2':'#B8860B', 'git3':'#FF6B35', 'gitBranchLabel0':'#0a0a0a', 'gitBranchLabel1':'#0a0a0a', 'gitBranchLabel2':'#FFFFFF', 'gitBranchLabel3':'#FFFFFF', 'commitLabelColor':'#FFFFFF', 'commitLabelBackground':'#1a1a1a', 'commitLabelBorder':'#FFD700', 'tagLabelColor':'#0a0a0a', 'tagLabelBackground':'#FFD700', 'tagLabelBorder':'#B8860B', 'titleColor':'#FFFFFF' } } }%%
 gitGraph
-    commit id: "init: hello world"
-    commit id: "feat: first website" tag: "v0.1"
-    branch frontend
-    commit id: "feat: react SPA"
-    commit id: "perf: lighthouse 100"
+    commit id: "hello-world"
+    commit id: "HTML+CSS+JS" tag: "2022"
+    branch fesc-student-agenda
+    commit id: "react-setup"
+    commit id: "auth-flow"
+    commit id: "agenda-crud"
+    commit id: "calendar-ui" tag: "v1.0"
     checkout main
-    merge frontend tag: "v1.0"
-    branch backend
-    commit id: "feat: node API"
-    commit id: "feat: graphql schema"
+    merge fesc-student-agenda tag: "2023"
+    branch sistema-de-gestion
+    commit id: "node-api"
+    commit id: "mongo-schema"
+    commit id: "dashboard-ui"
+    commit id: "roles+permisos" tag: "v2.0"
     checkout main
-    merge backend tag: "v2.0"
-    branch cloud
-    commit id: "feat: k8s cluster"
-    commit id: "feat: gitops pipeline"
+    merge sistema-de-gestion tag: "2024"
+    branch eas1-com-es
+    commit id: "nextjs-portfolio"
+    commit id: "ssr+seo"
+    commit id: "docker+ci-cd"
+    commit id: "deploy-prod" tag: "live"
     checkout main
-    merge cloud tag: "v3.0"
-    commit id: "launch: eas1.com.es" tag: "prod"
-    commit id: "feat: AI agents" type: HIGHLIGHT tag: "2026"
+    merge eas1-com-es tag: "2025"
+    commit id: "ai-agents" type: HIGHLIGHT
+    commit id: "edge-runtimes" type: HIGHLIGHT tag: "2026"
 ```
 
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  11  ·  ALGORITHM OF THE MONTH                                    -->
+<!--  10  ·  ALGORITHM OF THE MONTH                                    -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 11 · algorithm.of_the_month()</samp>
+  <samp>&gt; 10 · algorithm.of_the_month()</samp>
 </h2>
 
-> [!TIP]
-> Cada mes resuelvo un problema clasico con un twist. Este mes: **busqueda binaria adaptativa** con analisis formal de complejidad.
+<p>
+  <samp><b>&gt;</b> <code>busqueda binaria adaptativa</code> &nbsp;·&nbsp; analisis formal de complejidad</samp>
+</p>
 
 La complejidad de una busqueda binaria sobre un arreglo ordenado de tamaño $n$ satisface la recurrencia:
 
@@ -402,15 +461,14 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  12  ·  LATEST FROM DEV.TO (auto-synced)                          -->
+<!--  11  ·  LATEST FROM DEV.TO (auto-synced)                          -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 12 · latest.posts()</samp>
+  <samp>&gt; 11 · latest.posts()</samp>
 </h2>
 
 <!-- BLOG-POST-LIST:START -->
-- <sub>El workflow `blog-posts.yml` llenara esta seccion automaticamente tras el primer run. Trigger manual: Actions → "Sync Latest Dev.to Posts" → Run.</sub>
 <!-- BLOG-POST-LIST:END -->
 
 <p align="center">
@@ -420,11 +478,11 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  13  ·  NOW PLAYING                                               -->
+<!--  12  ·  NOW PLAYING                                               -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 13 · now.playing()</samp>
+  <samp>&gt; 12 · now.playing()</samp>
 </h2>
 
 <div align="center">
@@ -436,15 +494,20 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  14  ·  HIRE ME                                                   -->
+<!--  13  ·  HIRE ME                                                   -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <h2>
-  <samp>&gt; 14 · hire.me()</samp>
+  <samp>&gt; 13 · hire.me()</samp>
 </h2>
 
-> [!CAUTION]
-> **Cupos limitados.** Acepto un maximo de 3 proyectos en paralelo para garantizar calidad. Si tu equipo necesita arquitectura cloud, migracion a TypeScript end-to-end, o un MVP de AI en produccion — hablemos antes de que cierre el cupo del trimestre.
+<p align="center">
+  <samp>
+    Arquitectura cloud &nbsp;·&nbsp; migracion a TypeScript end-to-end &nbsp;·&nbsp; MVPs de AI en produccion.
+    <br/>
+    <b>Hablemos.</b>
+  </samp>
+</p>
 
 <p align="center">
   <a href="mailto:david.fonseca12p@gmail.com"><img src="https://img.shields.io/badge/AGENDAR%20LLAMADA-0a0a0a?style=for-the-badge&logo=googlecalendar&logoColor=FFD700&labelColor=0a0a0a" height="32"/></a>
@@ -459,13 +522,5 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FFD700,100:B8860B&height=120&section=footer&animation=twinkling" width="100%"/>
+  <img src="./assets/footer.svg" alt="David Fonseca — End of transmission" width="100%" />
 </div>
-
-<p align="center">
-  <samp>
-    <b>&lt;/&gt;</b> con <b>precision</b> y mucho <b>cafe</b> por <b>David Fonseca</b> · 2026
-    <br/>
-    <i>"El mejor codigo es el que nunca tuviste que explicar."</i>
-  </samp>
-</p>
