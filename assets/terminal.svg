@@ -1,0 +1,145 @@
+<svg fill="none" viewBox="0 0 900 480" width="900" height="480" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:900px;height:480px;">
+      <style>
+        /* Fuentes 100% nativas del sistema: GitHub bloquea @import externos en SVG embebidos */
+        .term {
+          width: 900px; height: 480px;
+          background: linear-gradient(180deg, #0a0c12 0%, #05070c 100%);
+          border-radius: 14px;
+          border: 1px solid rgba(255,215,0,0.35);
+          box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,215,0,0.08), inset 0 0 80px rgba(255,215,0,0.04);
+          overflow: hidden;
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'JetBrains Mono', 'Consolas', 'Roboto Mono', monospace;
+          position: relative;
+        }
+
+        .bar {
+          display: flex; align-items: center;
+          padding: 12px 18px;
+          background: linear-gradient(180deg, #111420, #0a0c12);
+          border-bottom: 1px solid rgba(255,215,0,0.15);
+        }
+        .dots { display: flex; gap: 8px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot.r { background: #ff5f57; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2); }
+        .dot.y { background: #febc2e; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2); }
+        .dot.g { background: #28c840; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2); }
+        .title {
+          flex: 1; text-align: center;
+          font-size: 12px; color: #b8a76a;
+          letter-spacing: 0.2em;
+        }
+        .title .sep { color: #ffd700; margin: 0 10px; }
+
+        .body {
+          padding: 22px 28px;
+          font-size: 14px;
+          line-height: 1.75;
+          color: #e6e1cf;
+          position: relative;
+        }
+        .body::before {
+          content: '';
+          position: absolute; inset: 0;
+          background: repeating-linear-gradient(0deg, rgba(255,215,0,0.02) 0 2px, transparent 2px 4px);
+          pointer-events: none;
+        }
+
+        .prompt { color: #ffd700; font-weight: 700; }
+        .user   { color: #fff8dc; font-weight: 600; }
+        .at     { color: #8a7a3a; }
+        .host   { color: #ffd700; }
+        .path   { color: #b8a76a; }
+        .arrow  { color: #ffd700; }
+        .cmd    { color: #fff8dc; }
+        .flag   { color: #b8860b; }
+        .out    { color: #c9c3a9; }
+        .key    { color: #ffd700; }
+        .str    { color: #fff8dc; }
+        .num    { color: #ffbf00; }
+        .ok     { color: #28c840; }
+
+        .line {
+          display: block;
+          overflow: hidden;
+          white-space: nowrap;
+          opacity: 0;
+          animation: appear 0.01s linear forwards, type 1.2s steps(60, end) forwards;
+          max-width: 0;
+        }
+        @keyframes appear { to { opacity: 1; } }
+        @keyframes type   { to { max-width: 840px; } }
+
+        .l1  { animation-delay: 0.2s, 0.2s; }
+        .l2  { animation-delay: 1.6s, 1.6s; animation-duration: 0.01s, 0.9s; }
+        .l3  { animation-delay: 2.6s, 2.6s; animation-duration: 0.01s, 0.9s; }
+        .l4  { animation-delay: 3.6s, 3.6s; animation-duration: 0.01s, 0.9s; }
+        .l5  { animation-delay: 4.6s, 4.6s; animation-duration: 0.01s, 0.9s; }
+        .l6  { animation-delay: 5.7s, 5.7s; }
+        .l7  { animation-delay: 7.0s, 7.0s; animation-duration: 0.01s, 0.9s; }
+        .l8  { animation-delay: 8.0s, 8.0s; animation-duration: 0.01s, 0.9s; }
+        .l9  { animation-delay: 9.0s, 9.0s; animation-duration: 0.01s, 0.9s; }
+        .l10 { animation-delay: 10.0s, 10.0s; animation-duration: 0.01s, 0.9s; }
+        .l11 { animation-delay: 11.2s, 11.2s; }
+        .l12 { animation-delay: 12.5s, 12.5s; animation-duration: 0.01s, 0.9s; }
+
+        .caret {
+          display: inline-block;
+          width: 8px; height: 16px;
+          background: #ffd700;
+          vertical-align: text-bottom;
+          margin-left: 4px;
+          animation: blink 0.9s step-end infinite;
+          box-shadow: 0 0 10px #ffd700;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .spacer { height: 6px; }
+
+        @media (prefers-color-scheme: light) {
+          .term { background: linear-gradient(180deg, #fffdf5 0%, #fff8e1 100%); border-color: rgba(138,109,0,0.35); }
+          .bar  { background: linear-gradient(180deg, #fff8dc, #fdf3c0); border-bottom-color: rgba(138,109,0,0.25); }
+          .body { color: #1a1a1a; }
+          .user { color: #1a1a1a; } .out { color: #2a2a2a; }
+          .title { color: #5a4a00; }
+        }
+      </style>
+
+      <div class="term">
+        <div class="bar">
+          <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+          <div class="title">david<span class="sep">//</span>zsh<span class="sep">//</span>~/about-me</div>
+          <div style="width:60px;"></div>
+        </div>
+
+        <div class="body">
+          <span class="line l1">
+            <span class="user">david</span><span class="at">@</span><span class="host">eas1.com.es</span>
+            <span class="path">~/about</span> <span class="arrow">&gt;</span>
+            <span class="cmd"> whoami</span> <span class="flag">--verbose</span>
+          </span>
+
+          <span class="line l2"><span class="out">{</span></span>
+          <span class="line l3"><span class="out">  </span><span class="key">"name"</span><span class="out">: </span><span class="str">"David Fonseca"</span><span class="out">,</span></span>
+          <span class="line l4"><span class="out">  </span><span class="key">"role"</span><span class="out">: </span><span class="str">"Full Stack Architect &amp; DevOps"</span><span class="out">,</span></span>
+          <span class="line l5"><span class="out">  </span><span class="key">"location"</span><span class="out">: </span><span class="str">"Bogota, Colombia"</span><span class="out">,</span></span>
+          <span class="line l6"><span class="out">  </span><span class="key">"focus"</span><span class="out">: [</span><span class="str">"TypeScript"</span><span class="out">, </span><span class="str">"Cloud Native"</span><span class="out">, </span><span class="str">"DX"</span><span class="out">],</span></span>
+          <span class="line l7"><span class="out">  </span><span class="key">"shipping"</span><span class="out">: </span><span class="num">24</span><span class="out"> x </span><span class="num">7</span><span class="out">,</span></span>
+          <span class="line l8"><span class="out">  </span><span class="key">"coffee_per_day"</span><span class="out">: </span><span class="num">3.14</span><span class="out">,</span></span>
+          <span class="line l9"><span class="out">  </span><span class="key">"status"</span><span class="out">: </span><span class="ok">"building the future"</span></span>
+          <span class="line l10"><span class="out">}</span></span>
+
+          <div class="spacer"></div>
+
+          <span class="line l11">
+            <span class="user">david</span><span class="at">@</span><span class="host">eas1.com.es</span>
+            <span class="path">~/about</span> <span class="arrow">&gt;</span>
+            <span class="cmd"> mission</span> <span class="flag">--short</span>
+          </span>
+          <span class="line l12"><span class="out">"Transformo cafe en arquitecturas que escalan a millones."</span><span class="caret"></span></span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

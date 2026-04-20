@@ -1,0 +1,264 @@
+<svg fill="none" viewBox="0 0 1200 320" width="1200" height="320" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:1200px;height:320px;">
+      <style>
+        /* Fuentes 100% nativas del sistema: GitHub sanitiza @import externos */
+        .wrap {
+          position: relative;
+          width: 1200px;
+          height: 320px;
+          overflow: hidden;
+          background:
+            radial-gradient(1200px 320px at 20% 10%, rgba(255,215,0,0.18), transparent 60%),
+            radial-gradient(900px 320px at 85% 90%, rgba(184,134,11,0.25), transparent 60%),
+            linear-gradient(135deg, #05060a 0%, #0b0e17 45%, #070812 100%);
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          color: #f7f3e3;
+        }
+
+        /* animated grid floor */
+        .grid {
+          position: absolute; inset: 0;
+          background-image:
+            linear-gradient(rgba(255,215,0,0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,215,0,0.08) 1px, transparent 1px);
+          background-size: 40px 40px;
+          mask-image: radial-gradient(ellipse 80% 60% at 50% 60%, #000 40%, transparent 85%);
+          animation: drift 14s linear infinite;
+        }
+        @keyframes drift {
+          from { background-position: 0 0, 0 0; }
+          to   { background-position: 40px 40px, 40px 40px; }
+        }
+
+        /* scanline */
+        .scan {
+          position: absolute; inset: 0;
+          background: linear-gradient(180deg, transparent 0%, rgba(255,215,0,0.06) 50%, transparent 100%);
+          background-size: 100% 6px;
+          mix-blend-mode: overlay;
+          opacity: 0.4;
+          pointer-events: none;
+        }
+
+        /* floating particles */
+        .dot {
+          position: absolute;
+          width: 4px; height: 4px; border-radius: 50%;
+          background: #ffd700;
+          box-shadow: 0 0 10px #ffd700, 0 0 20px rgba(255,215,0,0.6);
+          opacity: 0.8;
+        }
+        .d1 { top: 24%; left: 10%; animation: float 7s ease-in-out infinite; }
+        .d2 { top: 70%; left: 22%; animation: float 9s ease-in-out infinite 1s; }
+        .d3 { top: 18%; left: 78%; animation: float 8s ease-in-out infinite 2s; }
+        .d4 { top: 78%; left: 88%; animation: float 10s ease-in-out infinite 0.5s; }
+        .d5 { top: 45%; left: 95%; animation: float 11s ease-in-out infinite 1.5s; }
+        .d6 { top: 60%; left: 6%;  animation: float 9s  ease-in-out infinite 2.8s; }
+        @keyframes float {
+          0%,100% { transform: translateY(0) scale(1); opacity: 0.8; }
+          50%     { transform: translateY(-24px) scale(1.4); opacity: 1; }
+        }
+
+        /* content */
+        .content {
+          position: absolute; inset: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 64px;
+          z-index: 2;
+        }
+
+        .tagline {
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+          font-size: 14px;
+          letter-spacing: 0.4em;
+          color: #ffd700;
+          text-transform: uppercase;
+          opacity: 0;
+          animation: fade 0.9s ease-out 0.2s forwards;
+        }
+        .tagline::before {
+          content: ''; display: inline-block;
+          width: 28px; height: 1px;
+          background: #ffd700; vertical-align: middle;
+          margin-right: 14px;
+        }
+
+        .name {
+          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          font-weight: 800;
+          font-size: 92px;
+          line-height: 1;
+          letter-spacing: -0.03em;
+          margin: 8px 0 0 0;
+          background: linear-gradient(120deg, #fff8dc 0%, #ffd700 35%, #fff8dc 55%, #b8860b 75%, #ffd700 100%);
+          background-size: 300% 300%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          -webkit-text-fill-color: transparent;
+          filter: drop-shadow(0 0 18px rgba(255,215,0,0.45));
+          animation: shimmer 6s ease-in-out infinite, fade 0.9s ease-out 0.35s backwards;
+        }
+        @keyframes shimmer {
+          0%,100% { background-position: 0% 50%; }
+          50%     { background-position: 100% 50%; }
+        }
+
+        .role {
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+          font-size: 22px;
+          color: #e6e1cf;
+          margin-top: 18px;
+          display: flex; align-items: center; gap: 14px;
+          opacity: 0;
+          animation: fade 0.9s ease-out 0.6s forwards;
+        }
+        .role .bracket { color: #ffd700; font-weight: 700; }
+        .role .typed {
+          display: inline-block;
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: 2px solid #ffd700;
+          max-width: 0;
+          animation: typing 3.5s steps(40, end) 0.9s forwards, caret 0.8s step-end infinite 0.9s;
+        }
+        @keyframes typing { to { max-width: 520px; } }
+        @keyframes caret { 50% { border-color: transparent; } }
+
+        .badges {
+          display: flex; gap: 10px; margin-top: 24px;
+          opacity: 0; animation: fade 0.9s ease-out 1.1s forwards;
+        }
+        .badge {
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+          font-size: 11px; letter-spacing: 0.12em;
+          padding: 6px 12px; border-radius: 999px;
+          border: 1px solid rgba(255,215,0,0.35);
+          background: rgba(255,215,0,0.06);
+          color: #ffd700;
+          text-transform: uppercase;
+          backdrop-filter: blur(4px);
+        }
+        .badge.hot {
+          background: linear-gradient(90deg, rgba(255,215,0,0.2), rgba(184,134,11,0.2));
+          box-shadow: 0 0 24px rgba(255,215,0,0.25);
+        }
+
+        @keyframes fade { to { opacity: 1; } }
+
+        /* Rotating decorative ring on the right */
+        .orbit {
+          position: absolute;
+          top: 50%; right: 90px;
+          width: 220px; height: 220px;
+          transform: translateY(-50%);
+          animation: spin 24s linear infinite;
+        }
+        @keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+        .ring {
+          position: absolute; inset: 0;
+          border-radius: 50%;
+          border: 1px dashed rgba(255,215,0,0.45);
+        }
+        .ring.inner { inset: 28px; border: 1px solid rgba(255,215,0,0.25); }
+        .ring.core  { inset: 70px; border: 2px solid #ffd700; box-shadow: inset 0 0 40px rgba(255,215,0,0.45), 0 0 40px rgba(255,215,0,0.35); }
+        .node {
+          position: absolute;
+          width: 10px; height: 10px; border-radius: 50%;
+          background: #ffd700;
+          box-shadow: 0 0 12px #ffd700;
+        }
+        .n1 { top: -5px; left: 50%; transform: translateX(-50%); }
+        .n2 { bottom: -5px; left: 50%; transform: translateX(-50%); }
+        .n3 { top: 50%; left: -5px; transform: translateY(-50%); }
+        .n4 { top: 50%; right: -5px; transform: translateY(-50%); }
+
+        .orbit-label {
+          position: absolute;
+          top: 50%; left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'Consolas', 'Roboto Mono', monospace;
+          font-size: 10px; letter-spacing: 0.25em;
+          color: #ffd700; text-align: center;
+          animation: spin-reverse 24s linear infinite;
+        }
+        @keyframes spin-reverse { to { transform: translate(-50%, -50%) rotate(-360deg); } }
+        .orbit-label .num { display: block; font-size: 32px; color: #fff8dc; letter-spacing: 0; font-weight: 800; }
+
+        /* corner brackets */
+        .corner {
+          position: absolute; width: 28px; height: 28px;
+          border: 2px solid #ffd700;
+        }
+        .tl { top: 18px; left: 18px; border-right: 0; border-bottom: 0; }
+        .tr { top: 18px; right: 18px; border-left: 0; border-bottom: 0; }
+        .bl { bottom: 18px; left: 18px; border-right: 0; border-top: 0; }
+        .br { bottom: 18px; right: 18px; border-left: 0; border-top: 0; }
+
+        /* Light mode override */
+        @media (prefers-color-scheme: light) {
+          .wrap {
+            background:
+              radial-gradient(1200px 320px at 20% 10%, rgba(184,134,11,0.18), transparent 60%),
+              radial-gradient(900px 320px at 85% 90%, rgba(255,215,0,0.22), transparent 60%),
+              linear-gradient(135deg, #fffdf5 0%, #fff8dc 50%, #fff 100%);
+            color: #1a1a1a;
+          }
+          .tagline { color: #8a6d00; }
+          .role    { color: #1a1a1a; }
+          .badge   { color: #8a6d00; border-color: rgba(138,109,0,0.35); background: rgba(255,215,0,0.1); }
+        }
+      </style>
+
+      <div class="wrap">
+        <div class="grid"></div>
+        <div class="scan"></div>
+
+        <span class="corner tl"></span>
+        <span class="corner tr"></span>
+        <span class="corner bl"></span>
+        <span class="corner br"></span>
+
+        <span class="dot d1"></span>
+        <span class="dot d2"></span>
+        <span class="dot d3"></span>
+        <span class="dot d4"></span>
+        <span class="dot d5"></span>
+        <span class="dot d6"></span>
+
+        <div class="orbit">
+          <div class="ring"></div>
+          <div class="ring inner"></div>
+          <div class="ring core"></div>
+          <span class="node n1"></span>
+          <span class="node n2"></span>
+          <span class="node n3"></span>
+          <span class="node n4"></span>
+          <div class="orbit-label">
+            <span class="num">DF</span>
+            SYSTEM ONLINE
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="tagline">PORTFOLIO // V2026 // BOGOTA COLOMBIA</div>
+          <h1 class="name">David Fonseca</h1>
+          <div class="role">
+            <span class="bracket">&lt;</span>
+            <span class="typed">Full Stack Architect &amp; DevOps Engineer</span>
+            <span class="bracket">/&gt;</span>
+          </div>
+          <div class="badges">
+            <span class="badge hot">Available for hire</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">Cloud Native</span>
+            <span class="badge">AI Ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

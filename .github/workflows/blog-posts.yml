@@ -1,0 +1,27 @@
+name: Sync Latest Dev.to Posts
+
+on:
+  schedule:
+    # Re-run every 6 hours
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Update README with latest Dev.to posts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pull latest posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://dev.to/feed/davidcreat"
+          max_post_count: 5
+          template: "- [$title]($url) <sub>$date</sub>"
+          date_format: "mmm d, yyyy"
+          commit_message: "chore(readme): sync latest Dev.to articles"

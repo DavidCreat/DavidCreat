@@ -1,0 +1,59 @@
+{
+  "type": "season",
+  "autumn": {
+    "backgroundColor": "transparent",
+    "foregroundColor": "#FFD700",
+    "strongColor": "#FFF8DC",
+    "dimColor": "#8A6D00",
+    "textColor": "#FFF8DC",
+    "contribColors": [
+      "#1a1a1a",
+      "#3a2d00",
+      "#7a5d00",
+      "#b88c00",
+      "#ffd700"
+    ]
+  },
+  "winter": {
+    "backgroundColor": "transparent",
+    "foregroundColor": "#FFD700",
+    "strongColor": "#FFFFFF",
+    "dimColor": "#8A6D00",
+    "textColor": "#FFF8DC",
+    "contribColors": [
+      "#1a1a1a",
+      "#3a2d00",
+      "#7a5d00",
+      "#b88c00",
+      "#ffd700"
+    ]
+  },
+  "spring": {
+    "backgroundColor": "transparent",
+    "foregroundColor": "#FFD700",
+    "strongColor": "#FFF8DC",
+    "dimColor": "#8A6D00",
+    "textColor": "#FFF8DC",
+    "contribColors": [
+      "#1a1a1a",
+      "#3a2d00",
+      "#7a5d00",
+      "#b88c00",
+      "#ffd700"
+    ]
+  },
+  "summer": {
+    "backgroundColor": "transparent",
+    "foregroundColor": "#FFD700",
+    "strongColor": "#FFF8DC",
+    "dimColor": "#8A6D00",
+    "textColor": "#FFF8DC",
+    "contribColors": [
+      "#1a1a1a",
+      "#3a2d00",
+      "#7a5d00",
+      "#b88c00",
+      "#ffd700"
+    ]
+  }
+}
