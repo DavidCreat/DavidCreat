@@ -233,16 +233,28 @@
 
 <div align="center">
   <a href="https://github.com/DavidCreat/Sistema-de-Gestion-Orgnizada">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Sistema-de-Gestion-Orgnizada&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true"/>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Sistema-de-Gestion-Orgnizada&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="150" alt="Sistema de Gestion Organizada"/>
-    </picture>
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Sistema-de-Gestion-Orgnizada&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="Sistema de Gestion Organizada"/>
   </a>
   <a href="https://github.com/DavidCreat/fesc-student-agenda">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=fesc-student-agenda&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true"/>
-      <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=fesc-student-agenda&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="150" alt="FESC Student Agenda"/>
-    </picture>
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=fesc-student-agenda&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="FESC Student Agenda"/>
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/DavidCreat/Archivo_Central">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Archivo_Central&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="Archivo Central"/>
+  </a>
+  <a href="https://github.com/DavidCreat/Angular-.Net">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Angular-.Net&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="Angular + .NET"/>
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/DavidCreat/TaylorViz">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=TaylorViz&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="TaylorViz — Python"/>
+  </a>
+  <a href="https://github.com/DavidCreat/hackaton">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=hackaton&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="Hackaton"/>
   </a>
 </div>
 
@@ -257,30 +269,37 @@
 </div>
 
 ```mermaid
-%%{ init: { 'theme':'base', 'themeVariables': { 'fontFamily':'ui-monospace, SF Mono, Consolas, monospace', 'fontSize':'14px', 'primaryColor':'#0a0a0a', 'primaryTextColor':'#FFFFFF', 'primaryBorderColor':'#FFD700', 'lineColor':'#FFD700', 'clusterBkg':'transparent', 'clusterBorder':'#FFD700', 'edgeLabelBackground':'#0a0a0a' } } }%%
+%%{ init: { 'theme':'base', 'themeVariables': { 'fontFamily':'ui-monospace, SF Mono, Consolas, monospace', 'fontSize':'13px', 'primaryColor':'#0a0a0a', 'primaryTextColor':'#FFFFFF', 'primaryBorderColor':'#FFD700', 'lineColor':'#FFD700', 'clusterBkg':'transparent', 'clusterBorder':'#FFD700', 'edgeLabelBackground':'#0a0a0a' } } }%%
 flowchart LR
     classDef year       fill:#FFD700,color:#0a0a0a,stroke:#B8860B,stroke-width:2px,font-weight:bold
+    classDef origin     fill:#fff8dc,color:#0a0a0a,stroke:#B8860B,stroke-width:2.5px,font-weight:bold
     classDef milestone  fill:#0a0a0a,color:#FFFFFF,stroke:#FFD700,stroke-width:1.5px
     classDef highlight  fill:#1a1a1a,color:#FFD700,stroke:#FFD700,stroke-width:2px,font-weight:bold
 
-    Y1["2022"]:::year --> M1["HTML · CSS · JS"]:::milestone
-    M1 --> M2["Bootcamp<br/>Full Stack"]:::milestone
+    START(["⟡ Mar 2021<br/>ORIGIN"]):::origin --> Y1
+    Y1["2021"]:::year --> M1["LargeSpace-Company<br/>HTML · primer repo"]:::milestone
+    M1 --> M2["Large-Space-App<br/>CSS · primer deploy"]:::milestone
     M2 --> Y2
 
-    Y2["2023"]:::year --> M3["React · Node<br/>fesc-student-agenda"]:::milestone
-    M3 --> M4["TypeScript<br/>API Rest"]:::milestone
+    Y2["2022"]:::year --> M3["whileland_page<br/>HTML landings"]:::milestone
+    M3 --> M4["Arduino + C++<br/>temperature IoT"]:::milestone
     M4 --> Y3
 
-    Y3["2024"]:::year --> M5["Next.js · Vue<br/>Sistema de Gestion"]:::milestone
-    M5 --> M6["MongoDB · Redis<br/>GraphQL"]:::milestone
+    Y3["2023"]:::year --> M5["tienda<br/>primer TypeScript"]:::milestone
+    M5 --> M6["Plazoleta Comidas<br/>DB · backend SQL"]:::milestone
     M6 --> Y4
 
-    Y4["2025"]:::year --> M7["Docker · K8s<br/>AWS · GCP"]:::milestone
-    M7 --> M8["CI CD · Terraform<br/>eas1.com.es"]:::milestone
-    M8 --> Y5
+    Y4["2024"]:::year --> M7["Sistema Gestion<br/>PHP · Laravel"]:::milestone
+    M7 --> M8["Angular + .NET<br/>enterprise stack"]:::milestone
+    M8 --> M9["FESC Agenda<br/>TS · React"]:::milestone
+    M9 --> Y5
 
-    Y5["2026"]:::year --> M9["AI Agents<br/>Edge Runtimes"]:::highlight
-    M9 --> M10["WebGPU · Rust<br/>Full Stack Architect"]:::highlight
+    Y5["2025"]:::year --> M10["TaylorViz · Python<br/>metodos numericos"]:::milestone
+    M10 --> M11["EAS1 HOSTING<br/>DevOps · infra"]:::milestone
+    M11 --> Y6
+
+    Y6["2026"]:::year --> M12["Spring Boot<br/>Java enterprise"]:::highlight
+    M12 --> M13["AI Agents<br/>Full Stack Architect"]:::highlight
 ```
 
 <br/>
@@ -296,31 +315,33 @@ flowchart LR
 ```mermaid
 %%{ init: { 'theme':'base', 'themeVariables': { 'fontFamily':'ui-monospace, SF Mono, Consolas, monospace', 'fontSize':'13px', 'git0':'#FFD700', 'git1':'#FFF8DC', 'git2':'#B8860B', 'git3':'#FF6B35', 'gitBranchLabel0':'#0a0a0a', 'gitBranchLabel1':'#0a0a0a', 'gitBranchLabel2':'#FFFFFF', 'gitBranchLabel3':'#FFFFFF', 'commitLabelColor':'#FFFFFF', 'commitLabelBackground':'#1a1a1a', 'commitLabelBorder':'#FFD700', 'tagLabelColor':'#0a0a0a', 'tagLabelBackground':'#FFD700', 'tagLabelBorder':'#B8860B', 'titleColor':'#FFFFFF' } } }%%
 gitGraph
-    commit id: "hello-world"
-    commit id: "HTML+CSS+JS" tag: "2022"
-    branch fesc-student-agenda
-    commit id: "react-setup"
-    commit id: "auth-flow"
-    commit id: "agenda-crud"
-    commit id: "calendar-ui" tag: "v1.0"
+    commit id: "first-commit" tag: "Mar-2021"
+    branch largespace
+    commit id: "html-company"
+    commit id: "css-app" tag: "2021"
     checkout main
-    merge fesc-student-agenda tag: "2023"
-    branch sistema-de-gestion
-    commit id: "node-api"
-    commit id: "mongo-schema"
-    commit id: "dashboard-ui"
-    commit id: "roles+permisos" tag: "v2.0"
+    merge largespace
+    commit id: "whileland-page"
+    commit id: "arduino-cpp" tag: "2022"
+    branch tienda-ts
+    commit id: "first-typescript"
+    commit id: "plazoleta-db" tag: "2023"
     checkout main
-    merge sistema-de-gestion tag: "2024"
-    branch eas1-com-es
-    commit id: "nextjs-portfolio"
-    commit id: "ssr+seo"
-    commit id: "docker+ci-cd"
-    commit id: "deploy-prod" tag: "live"
+    merge tienda-ts
+    branch sistema-gestion
+    commit id: "php-laravel"
+    commit id: "angular-net"
+    commit id: "fesc-agenda" tag: "2024"
     checkout main
-    merge eas1-com-es tag: "2025"
-    commit id: "ai-agents" type: HIGHLIGHT
-    commit id: "edge-runtimes" type: HIGHLIGHT tag: "2026"
+    merge sistema-gestion
+    branch python-math
+    commit id: "taylor-viz"
+    commit id: "biseccion-newton"
+    commit id: "eas1-hosting" tag: "2025"
+    checkout main
+    merge python-math
+    commit id: "spring-boot" type: HIGHLIGHT
+    commit id: "ai-agents" type: HIGHLIGHT tag: "2026"
 ```
 
 <br/>

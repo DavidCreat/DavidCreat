@@ -184,9 +184,9 @@
           <div class="divider"></div>
 
           <div class="body">
-            Arquitecto <b>Full Stack</b> con obsesion por <span class="tag">DX</span>, sistemas distribuidos y experiencias web que se sienten instantaneas.
+            <b>Full-Stack Dev</b> convirtiendo ideas en codigo. Obsesion por <span class="tag">DX</span>, sistemas escalables y experiencias que se sienten instantaneas.
             <br/><br/>
-            Diseño <span class="tag">APIs tipadas</span> end-to-end, pipelines <span class="tag">CI/CD</span> idempotentes y <b>UIs</b> que respetan al usuario.
+            Stack de batalla: <span class="tag">TS</span> <span class="tag">Laravel</span> <span class="tag">Spring</span> <span class="tag">DevOps</span>.
           </div>
 
           <div class="footer-line"><span class="k">mindset ▸</span> build · ship · iterate</div>
@@ -206,10 +206,10 @@
           <div class="divider"></div>
 
           <ul class="ilist">
-            <li><span class="arrow">▸</span><span class="label">SHIP</span><span>en <b>eas1.com.es</b></span></li>
-            <li><span class="arrow">▸</span><span class="label">LEARN</span><span>edge runtimes &amp; <b>AI agents</b></span></li>
-            <li><span class="arrow">▸</span><span class="label">EXPLR</span><span><b>Rust</b> &amp; <b>WebGPU</b></span></li>
-            <li><span class="arrow">▸</span><span class="label">TEACH</span><span><b>devs junior</b> en LATAM</span></li>
+            <li><span class="arrow">▸</span><span class="label">SHIP</span><span><b>EAS1 HOSTING</b> · infra</span></li>
+            <li><span class="arrow">▸</span><span class="label">CODE</span><span><b>Laravel</b> &amp; <b>Spring Boot</b></span></li>
+            <li><span class="arrow">▸</span><span class="label">LEARN</span><span><b>DevOps</b> &amp; AI agents</span></li>
+            <li><span class="arrow">▸</span><span class="label">BUILD</span><span><b>ideas</b> → <b>codigo</b></span></li>
           </ul>
 
           <div class="footer-line"><span class="k">status ▸</span> available for hire</div>

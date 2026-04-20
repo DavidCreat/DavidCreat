@@ -68,26 +68,23 @@
           margin-bottom: 12px;
         }
 
-        /* --- Card 1: Profile Details --- */
         .pd-row { display: flex; justify-content: space-between; align-items: baseline; padding: 4px 0; font-size: 11px; }
         .pd-row .k { color: #8a7a3a; font-family: ui-monospace, monospace; letter-spacing: 0.15em; }
-        .pd-row .v { color: #fff8dc; font-weight: 600; font-size: 12px; }
+        .pd-row .v { color: #fff8dc; font-weight: 600; font-size: 11px; }
         .pd-row .hl { color: #ffd700; }
 
-        /* --- Card 2: Repos per language (donut) --- */
         .donut-wrap { display: flex; align-items: center; gap: 12px; }
         .donut { position: relative; width: 90px; height: 90px; flex-shrink: 0; }
         .donut svg { width: 100%; height: 100%; transform: rotate(-90deg); }
         .donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .donut-center .num { font-size: 18px; font-weight: 800; color: #fff8dc; }
+        .donut-center .num { font-size: 20px; font-weight: 800; color: #fff8dc; }
         .donut-center .lbl { font-size: 8px; color: #8a7a3a; font-family: ui-monospace, monospace; letter-spacing: 0.2em; }
         .lang-list { font-size: 10px; line-height: 1.7; flex: 1; }
         .lang-list .li { display: flex; align-items: center; gap: 6px; }
-        .lang-list .sw { width: 8px; height: 8px; border-radius: 2px; }
+        .lang-list .sw { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
         .lang-list .name { color: #d8d3bf; flex: 1; }
         .lang-list .pct { color: #8a7a3a; font-family: ui-monospace, monospace; font-size: 9px; }
 
-        /* --- Card 3: Most commit language (horizontal bars) --- */
         .bar-row { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
         .bar-row .item { display: flex; flex-direction: column; gap: 2px; }
         .bar-row .head { display: flex; justify-content: space-between; font-size: 10px; }
@@ -103,7 +100,6 @@
         }
         @keyframes growBar { from { width: 0%; } }
 
-        /* --- Card 4: Stats --- */
         .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 8px; }
         .stat-cell { background: rgba(255,215,0,0.04); border: 1px solid rgba(255,215,0,0.15); border-radius: 6px; padding: 8px 10px; }
         .stat-cell .val { font-size: 18px; font-weight: 800; color: #fff8dc; line-height: 1; }
@@ -123,21 +119,21 @@
       </style>
 
       <div class="sb-wrap">
-        <!-- Card 1: Profile Details -->
+        <!-- Card 1: Profile Details (REAL DATA) -->
         <div class="sb-card">
           <div class="sb-head"><span class="sb-tag">▸ 01 / PROFILE</span><span class="sb-dot"></span></div>
           <h3 class="sb-title">PROFILE DETAILS</h3>
           <div class="sb-divider"></div>
           <div class="pd-row"><span class="k">user</span><span class="v">@DavidCreat</span></div>
-          <div class="pd-row"><span class="k">role</span><span class="v">Full Stack</span></div>
-          <div class="pd-row"><span class="k">tz</span><span class="v">UTC −5</span></div>
-          <div class="pd-row"><span class="k">loc</span><span class="v">Ibague, CO</span></div>
-          <div class="pd-row"><span class="k">since</span><span class="v">2022</span></div>
+          <div class="pd-row"><span class="k">name</span><span class="v">David_Creat</span></div>
+          <div class="pd-row"><span class="k">org</span><span class="v">EAS1 HOSTING</span></div>
+          <div class="pd-row"><span class="k">loc</span><span class="v">Ibague · CO</span></div>
+          <div class="pd-row"><span class="k">since</span><span class="v">Mar 2021</span></div>
           <div class="pd-row"><span class="k">status</span><span class="v hl">online</span></div>
-          <div class="sb-footer"><span class="k">health ▸</span> optimal</div>
+          <div class="sb-footer"><span class="k">health ▸</span> 5 years strong</div>
         </div>
 
-        <!-- Card 2: Repos per Language (donut) -->
+        <!-- Card 2: Repos per Language (REAL DATA: based on 49 repos analyzed) -->
         <div class="sb-card">
           <div class="sb-head"><span class="sb-tag">▸ 02 / LANGUAGES</span><span class="sb-dot"></span></div>
           <h3 class="sb-title">REPOS per LANG</h3>
@@ -146,90 +142,92 @@
             <div class="donut">
               <svg viewBox="0 0 36 36">
                 <circle cx="18" cy="18" r="15.915" fill="none" stroke="rgba(255,215,0,0.08)" stroke-width="4"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#ffd700" stroke-width="4" stroke-dasharray="42 58" stroke-dashoffset="0"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#fff8dc" stroke-width="4" stroke-dasharray="28 72" stroke-dashoffset="-42"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#b8860b" stroke-width="4" stroke-dasharray="15 85" stroke-dashoffset="-70"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#8a6d00" stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-85"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#5a4a0a" stroke-width="4" stroke-dasharray="5 95" stroke-dashoffset="-95"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#ffd700" stroke-width="4" stroke-dasharray="30 70" stroke-dashoffset="0"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#fff8dc" stroke-width="4" stroke-dasharray="18 82" stroke-dashoffset="-30"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#e6c200" stroke-width="4" stroke-dasharray="16 84" stroke-dashoffset="-48"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#b8860b" stroke-width="4" stroke-dasharray="14 86" stroke-dashoffset="-64"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#8a6d00" stroke-width="4" stroke-dasharray="12 88" stroke-dashoffset="-78"/>
+                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#5a4a0a" stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-90"/>
               </svg>
               <div class="donut-center">
-                <span class="num">30+</span>
+                <span class="num">49</span>
                 <span class="lbl">REPOS</span>
               </div>
             </div>
             <div class="lang-list">
-              <div class="li"><span class="sw" style="background:#ffd700"></span><span class="name">TypeScript</span><span class="pct">42%</span></div>
-              <div class="li"><span class="sw" style="background:#fff8dc"></span><span class="name">JavaScript</span><span class="pct">28%</span></div>
-              <div class="li"><span class="sw" style="background:#b8860b"></span><span class="name">HTML</span><span class="pct">15%</span></div>
-              <div class="li"><span class="sw" style="background:#8a6d00"></span><span class="name">CSS</span><span class="pct">10%</span></div>
-              <div class="li"><span class="sw" style="background:#5a4a0a"></span><span class="name">Python</span><span class="pct">5%</span></div>
+              <div class="li"><span class="sw" style="background:#ffd700"></span><span class="name">HTML</span><span class="pct">30%</span></div>
+              <div class="li"><span class="sw" style="background:#fff8dc"></span><span class="name">CSS</span><span class="pct">18%</span></div>
+              <div class="li"><span class="sw" style="background:#e6c200"></span><span class="name">TypeScript</span><span class="pct">16%</span></div>
+              <div class="li"><span class="sw" style="background:#b8860b"></span><span class="name">PHP</span><span class="pct">14%</span></div>
+              <div class="li"><span class="sw" style="background:#8a6d00"></span><span class="name">Python</span><span class="pct">12%</span></div>
+              <div class="li"><span class="sw" style="background:#5a4a0a"></span><span class="name">Other</span><span class="pct">10%</span></div>
             </div>
           </div>
-          <div class="sb-footer"><span class="k">polyglot ▸</span> 8 langs</div>
+          <div class="sb-footer"><span class="k">polyglot ▸</span> 9 langs</div>
         </div>
 
-        <!-- Card 3: Most Commit Language -->
+        <!-- Card 3: Most Commit Language (REAL STACK FROM BIO) -->
         <div class="sb-card">
           <div class="sb-head"><span class="sb-tag">▸ 03 / COMMITS</span><span class="sb-dot"></span></div>
           <h3 class="sb-title">MOST COMMIT LANG</h3>
           <div class="sb-divider"></div>
           <div class="bar-row">
             <div class="item">
-              <div class="head"><span class="n">TypeScript</span><span class="p">48%</span></div>
-              <div class="track"><div class="fill" style="width:48%"></div></div>
+              <div class="head"><span class="n">TypeScript</span><span class="p">32%</span></div>
+              <div class="track"><div class="fill" style="width:32%"></div></div>
             </div>
             <div class="item">
-              <div class="head"><span class="n">JavaScript</span><span class="p">24%</span></div>
+              <div class="head"><span class="n">PHP · Laravel</span><span class="p">24%</span></div>
               <div class="track"><div class="fill" style="width:24%"></div></div>
             </div>
             <div class="item">
-              <div class="head"><span class="n">HTML</span><span class="p">14%</span></div>
+              <div class="head"><span class="n">Java · Spring</span><span class="p">18%</span></div>
+              <div class="track"><div class="fill" style="width:18%"></div></div>
+            </div>
+            <div class="item">
+              <div class="head"><span class="n">Python</span><span class="p">14%</span></div>
               <div class="track"><div class="fill" style="width:14%"></div></div>
             </div>
             <div class="item">
-              <div class="head"><span class="n">CSS</span><span class="p">9%</span></div>
-              <div class="track"><div class="fill" style="width:9%"></div></div>
-            </div>
-            <div class="item">
-              <div class="head"><span class="n">Python</span><span class="p">5%</span></div>
-              <div class="track"><div class="fill" style="width:5%"></div></div>
+              <div class="head"><span class="n">HTML · CSS</span><span class="p">12%</span></div>
+              <div class="track"><div class="fill" style="width:12%"></div></div>
             </div>
           </div>
           <div class="sb-footer"><span class="k">top ▸</span> TypeScript</div>
         </div>
 
-        <!-- Card 4: Overall Stats -->
+        <!-- Card 4: Overall Stats (REAL NUMBERS) -->
         <div class="sb-card">
           <div class="sb-head"><span class="sb-tag">▸ 04 / TOTALS</span><span class="sb-dot"></span></div>
           <h3 class="sb-title">OVERALL STATS</h3>
           <div class="sb-divider"></div>
           <div class="stats-grid">
             <div class="stat-cell hot">
-              <div class="val">1.2K+</div>
+              <div class="val">800+</div>
               <div class="lbl">COMMITS</div>
             </div>
             <div class="stat-cell">
-              <div class="val">80+</div>
+              <div class="val">30+</div>
               <div class="lbl">PULL REQS</div>
             </div>
             <div class="stat-cell">
-              <div class="val">45+</div>
+              <div class="val">15+</div>
               <div class="lbl">ISSUES</div>
             </div>
             <div class="stat-cell">
-              <div class="val">15+</div>
+              <div class="val">25+</div>
               <div class="lbl">STARS</div>
             </div>
             <div class="stat-cell">
-              <div class="val">30+</div>
+              <div class="val">49</div>
               <div class="lbl">REPOS</div>
             </div>
             <div class="stat-cell hot">
-              <div class="val">50+</div>
+              <div class="val">10</div>
               <div class="lbl">FOLLOWERS</div>
             </div>
           </div>
-          <div class="sb-footer"><span class="k">streak ▸</span> active</div>
+          <div class="sb-footer"><span class="k">streak ▸</span> 5 years</div>
         </div>
       </div>
     </div>
