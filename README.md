@@ -426,8 +426,7 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
   <img src="./assets/headers/11-latest-posts.svg" alt="11 · latest.posts()" width="100%"/>
 </div>
 
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [Arquitectura Hexagonal con Spring Boot y Angular: lo que aprendí aplicándola en producción](https://dev.to/davidcreat/arquitectura-hexagonal-con-spring-boot-y-angular-lo-que-aprendi-aplicandola-en-produccion-4hid) <sub>Apr 20, 2026</sub><!-- BLOG-POST-LIST:END -->
 
 <p align="center">
   <a href="https://dev.to/davidcreat"><img src="https://img.shields.io/badge/VER%20TODOS%20LOS%20ARTICULOS-0a0a0a?style=for-the-badge&logo=devdotto&logoColor=FFD700&labelColor=0a0a0a" height="28"/></a>
