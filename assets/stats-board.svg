@@ -50,24 +50,24 @@
     <line x1="18" y1="70" x2="252" y2="70" stroke="#FFD700" stroke-opacity=".18"/>
     <circle cx="23" cy="88" r="4" fill="#663399"/>
     <text x="34" y="92" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">CSS</text>
-    <text x="252" y="92" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">25.8%</text>
+    <text x="252" y="92" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">25.7%</text>
     <rect x="18" y="99" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
-    <rect x="18" y="99" width="60.5" height="4" rx="2" fill="#663399"><animate attributeName="width" values="0;0;60.5" keyTimes="0;0.4000;1" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <rect x="18" y="99" width="60.2" height="4" rx="2" fill="#663399"><animate attributeName="width" values="0;0;60.2" keyTimes="0;0.4000;1" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
     <circle cx="23" cy="118" r="4" fill="#e34c26"/>
     <text x="34" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">HTML</text>
-    <text x="252" y="122" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">23.6%</text>
+    <text x="252" y="122" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">23.5%</text>
     <rect x="18" y="129" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
-    <rect x="18" y="129" width="55.1" height="4" rx="2" fill="#e34c26"><animate attributeName="width" values="0;0;55.1" keyTimes="0;0.4375;1" dur="1.6s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <rect x="18" y="129" width="54.9" height="4" rx="2" fill="#e34c26"><animate attributeName="width" values="0;0;54.9" keyTimes="0;0.4375;1" dur="1.6s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
     <circle cx="23" cy="148" r="4" fill="#DA5B0B"/>
     <text x="34" y="152" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">Jupyter Notebook</text>
-    <text x="252" y="152" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">16.8%</text>
+    <text x="252" y="152" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">16.7%</text>
     <rect x="18" y="159" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
-    <rect x="18" y="159" width="39.2" height="4" rx="2" fill="#DA5B0B"><animate attributeName="width" values="0;0;39.2" keyTimes="0;0.4706;1" dur="1.7s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <rect x="18" y="159" width="39.1" height="4" rx="2" fill="#DA5B0B"><animate attributeName="width" values="0;0;39.1" keyTimes="0;0.4706;1" dur="1.7s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
     <circle cx="23" cy="178" r="4" fill="#f1e05a"/>
     <text x="34" y="182" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">JavaScript</text>
-    <text x="252" y="182" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">15.3%</text>
+    <text x="252" y="182" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">15.6%</text>
     <rect x="18" y="189" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
-    <rect x="18" y="189" width="35.7" height="4" rx="2" fill="#f1e05a"><animate attributeName="width" values="0;0;35.7" keyTimes="0;0.5000;1" dur="1.8s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <rect x="18" y="189" width="36.6" height="4" rx="2" fill="#f1e05a"><animate attributeName="width" values="0;0;36.6" keyTimes="0;0.5000;1" dur="1.8s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
     <circle cx="23" cy="208" r="4" fill="#3178c6"/>
     <text x="34" y="212" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">TypeScript</text>
     <text x="252" y="212" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">3.4%</text>
@@ -110,10 +110,10 @@
     </rect>
     <text x="193.5" y="191.16014234875445" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">84</text>
     <text x="193.5" y="258" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">'25</text>
-    <rect x="217.5" y="237.19572953736656" width="30.0" height="4.8" rx="3" fill="#FFD700" fill-opacity="0.37">
-      <animate attributeName="height" values="0;0;4.8" keyTimes="0;0.5789;1" dur="1.9s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="242;242;237.2" keyTimes="0;0.5789;1" dur="1.9s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    <rect x="217.5" y="236.66192170818505" width="30.0" height="5.3" rx="3" fill="#FFD700" fill-opacity="0.37">
+      <animate attributeName="height" values="0;0;5.3" keyTimes="0;0.5789;1" dur="1.9s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="242;242;236.7" keyTimes="0;0.5789;1" dur="1.9s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
     </rect>
-    <text x="232.5" y="231.19572953736656" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">9</text>
+    <text x="232.5" y="230.66192170818505" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">10</text>
     <text x="232.5" y="258" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">'26</text><text x="18" y="276" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">peak ▸ <tspan fill="#FFD700">2021</tspan></text></g>
   <g transform="translate(895 24)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.4783;1" dur="1.15s" fill="freeze"/>
     <rect width="270" height="292" rx="10" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".2"/>
@@ -123,13 +123,13 @@
     <text x="18" y="56" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" fill="#FFF8DC">OVERALL</text>
     <line x1="18" y1="70" x2="252" y2="70" stroke="#FFD700" stroke-opacity=".18"/>
     <rect x="18" y="84" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
-    <text x="30" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">686</text>
+    <text x="30" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">687</text>
     <text x="30" y="128" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">COMMITS</text>
     <rect x="138" y="84" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
-    <text x="150" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">759</text>
+    <text x="150" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">760</text>
     <text x="150" y="128" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">CONTRIBS</text>
     <rect x="18" y="146" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
-    <text x="30" y="174" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">36</text>
+    <text x="30" y="174" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">22</text>
     <text x="30" y="190" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">PULL REQS</text>
     <rect x="138" y="146" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
     <text x="150" y="174" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">39</text>
