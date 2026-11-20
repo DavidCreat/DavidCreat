@@ -1,243 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" fill="none">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="width:1200px;height:440px;">
-      <style>
-        .wcwrap {
-          width: 1200px; height: 440px;
-          background:
-            radial-gradient(900px 440px at 50% 50%, rgba(255,215,0,0.06), transparent 60%),
-            linear-gradient(135deg, #05060a 0%, #0a0d15 50%, #05060a 100%);
-          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          color: #e6e1cf;
-          display: flex;
-          align-items: stretch;
-          padding: 28px;
-          box-sizing: border-box;
-          gap: 20px;
-          position: relative;
-        }
-
-        /* subtle grid backdrop */
-        .wcwrap::before {
-          content: '';
-          position: absolute; inset: 0;
-          background-image:
-            linear-gradient(rgba(255,215,0,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,215,0,0.05) 1px, transparent 1px);
-          background-size: 40px 40px;
-          mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%);
-        }
-
-        .card {
-          position: relative;
-          flex: 1;
-          background: linear-gradient(160deg, rgba(255,215,0,0.04) 0%, rgba(10,10,10,0.6) 60%);
-          border: 1px solid rgba(255,215,0,0.2);
-          border-radius: 10px;
-          padding: 24px 22px;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          backdrop-filter: blur(4px);
-        }
-
-        /* animated border shine */
-        .card::before {
-          content: '';
-          position: absolute; inset: -1px;
-          border-radius: 10px;
-          padding: 1px;
-          background: linear-gradient(135deg, transparent 30%, rgba(255,215,0,0.6) 50%, transparent 70%);
-          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-          -webkit-mask-composite: xor;
-                  mask-composite: exclude;
-          opacity: 0.5;
-          animation: borderShine 6s linear infinite;
-        }
-        @keyframes borderShine {
-          0%   { background-position: -200% 0; }
-          100% { background-position: 200% 0; }
-        }
-
-        .ch-top {
-          display: flex; justify-content: space-between; align-items: center;
-          margin-bottom: 14px;
-        }
-        .ch-num {
-          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
-          font-size: 11px; letter-spacing: 0.35em;
-          color: #8a7a3a;
-        }
-        .ch-dot {
-          width: 8px; height: 8px; border-radius: 50%;
-          background: #ffd700;
-          box-shadow: 0 0 10px #ffd700;
-          animation: blink 1.8s ease-in-out infinite;
-        }
-        @keyframes blink {
-          0%,100% { opacity: 1; transform: scale(1); }
-          50%     { opacity: 0.4; transform: scale(0.8); }
-        }
-
-        .ch-title {
-          font-size: 26px; font-weight: 800;
-          color: #fff8dc;
-          letter-spacing: 2px;
-          margin: 0 0 4px 0;
-          background: linear-gradient(120deg, #fff8dc 0%, #ffd700 50%, #fff8dc 100%);
-          background-size: 200% 200%;
-          -webkit-background-clip: text; background-clip: text;
-          color: transparent; -webkit-text-fill-color: transparent;
-          animation: shimmer 5s ease-in-out infinite;
-        }
-        @keyframes shimmer {
-          0%,100% { background-position: 0% 50%; }
-          50%     { background-position: 100% 50%; }
-        }
-
-        .ch-subtitle {
-          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
-          font-size: 10px; letter-spacing: 0.3em;
-          color: #b8860b;
-          text-transform: uppercase;
-          margin-bottom: 18px;
-        }
-
-        .divider {
-          width: 100%; height: 1px;
-          background: linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.4) 50%, transparent 100%);
-          margin: 4px 0 16px 0;
-        }
-
-        .body {
-          font-size: 13px;
-          line-height: 1.7;
-          color: #d8d3bf;
-          flex: 1;
-        }
-        .body b { color: #fff8dc; font-weight: 700; }
-        .tag {
-          display: inline-block;
-          padding: 2px 8px;
-          background: rgba(255,215,0,0.1);
-          border: 1px solid rgba(255,215,0,0.35);
-          border-radius: 4px;
-          color: #ffd700;
-          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
-          font-size: 11px;
-          font-weight: 600;
-          margin: 0 2px;
-        }
-
-        .ilist { list-style: none; padding: 0; margin: 0; }
-        .ilist li {
-          display: flex; align-items: baseline; gap: 10px;
-          padding: 6px 0;
-          font-size: 13px;
-          color: #d8d3bf;
-        }
-        .ilist .arrow {
-          color: #ffd700; font-family: ui-monospace, monospace;
-          font-weight: 700; font-size: 12px;
-        }
-        .ilist .label {
-          color: #8a7a3a; font-family: ui-monospace, monospace;
-          font-size: 11px; letter-spacing: 0.12em;
-          width: 42px; display: inline-block;
-        }
-
-        .footer-line {
-          margin-top: auto;
-          padding-top: 14px;
-          border-top: 1px dashed rgba(255,215,0,0.2);
-          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
-          font-size: 11px;
-          color: #b8860b;
-          letter-spacing: 0.1em;
-        }
-        .footer-line .k { color: #ffd700; font-weight: 700; }
-
-        /* corner decorations */
-        .corn {
-          position: absolute; width: 12px; height: 12px;
-          border: 2px solid #ffd700;
-          opacity: 0.6;
-        }
-        .c-tl { top: -1px; left: -1px; border-right: 0; border-bottom: 0; border-top-left-radius: 10px; }
-        .c-tr { top: -1px; right: -1px; border-left: 0; border-bottom: 0; border-top-right-radius: 10px; }
-        .c-bl { bottom: -1px; left: -1px; border-right: 0; border-top: 0; border-bottom-left-radius: 10px; }
-        .c-br { bottom: -1px; right: -1px; border-left: 0; border-top: 0; border-bottom-right-radius: 10px; }
-      </style>
-
-      <div class="wcwrap">
-        <!-- Card 01: SNAPSHOT -->
-        <div class="card">
-          <span class="corn c-tl"></span><span class="corn c-tr"></span>
-          <span class="corn c-bl"></span><span class="corn c-br"></span>
-
-          <div class="ch-top">
-            <span class="ch-num">▸ 01 / SNAPSHOT</span>
-            <span class="ch-dot"></span>
-          </div>
-          <h2 class="ch-title">SNAPSHOT</h2>
-          <div class="ch-subtitle">who.am.i()</div>
-          <div class="divider"></div>
-
-          <div class="body">
-            <b>Full-Stack Dev</b> convirtiendo ideas en codigo. Obsesion por <span class="tag">DX</span>, sistemas escalables y experiencias que se sienten instantaneas.
-            <br/><br/>
-            Stack de batalla: <span class="tag">TS</span> <span class="tag">Laravel</span> <span class="tag">Spring</span> <span class="tag">DevOps</span>.
-          </div>
-
-          <div class="footer-line"><span class="k">mindset ▸</span> build · ship · iterate</div>
-        </div>
-
-        <!-- Card 02: CURRENTLY -->
-        <div class="card">
-          <span class="corn c-tl"></span><span class="corn c-tr"></span>
-          <span class="corn c-bl"></span><span class="corn c-br"></span>
-
-          <div class="ch-top">
-            <span class="ch-num">▸ 02 / CURRENTLY</span>
-            <span class="ch-dot"></span>
-          </div>
-          <h2 class="ch-title">CURRENTLY</h2>
-          <div class="ch-subtitle">active.streams()</div>
-          <div class="divider"></div>
-
-          <ul class="ilist">
-            <li><span class="arrow">▸</span><span class="label">SHIP</span><span><b>EAS1 HOSTING</b> · infra</span></li>
-            <li><span class="arrow">▸</span><span class="label">CODE</span><span><b>Laravel</b> &amp; <b>Spring Boot</b></span></li>
-            <li><span class="arrow">▸</span><span class="label">LEARN</span><span><b>DevOps</b> &amp; AI agents</span></li>
-            <li><span class="arrow">▸</span><span class="label">BUILD</span><span><b>ideas</b> → <b>codigo</b></span></li>
-          </ul>
-
-          <div class="footer-line"><span class="k">status ▸</span> available for hire</div>
-        </div>
-
-        <!-- Card 03: FIND ME -->
-        <div class="card">
-          <span class="corn c-tl"></span><span class="corn c-tr"></span>
-          <span class="corn c-bl"></span><span class="corn c-br"></span>
-
-          <div class="ch-top">
-            <span class="ch-num">▸ 03 / FIND ME</span>
-            <span class="ch-dot"></span>
-          </div>
-          <h2 class="ch-title">FIND ME</h2>
-          <div class="ch-subtitle">contact.channels()</div>
-          <div class="divider"></div>
-
-          <ul class="ilist">
-            <li><span class="arrow">▸</span><span class="label">WEB</span><span><b>eas1.com.es</b></span></li>
-            <li><span class="arrow">▸</span><span class="label">BLOG</span><span><b>dev.to/davidcreat</b></span></li>
-            <li><span class="arrow">▸</span><span class="label">MAIL</span><span><b>david.fonseca12p@gmail.com</b></span></li>
-            <li><span class="arrow">▸</span><span class="label">GEO</span><span><b>Ibague, Tolima</b> · UTC−5</span></li>
-          </ul>
-
-          <div class="footer-line"><span class="k">uptime ▸</span> 24 / 7</div>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="whoami — snapshot, currently, find me" fill="none">
+  <title>whoami — snapshot, currently, find me</title>
+  <defs>
+    <linearGradient id="wc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05060a"/><stop offset=".5" stop-color="#0b0e17"/><stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+    <radialGradient id="wc-glow" cx=".2" cy="0" r="1">
+      <stop offset="0" stop-color="#FFD700" stop-opacity=".14"/><stop offset=".6" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="wc-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFD700" stroke-opacity=".05"/>
+    </pattern>
+    <clipPath id="wc-clip"><rect width="1200" height="440" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#wc-clip)">
+    <rect width="1200" height="440" fill="url(#wc-bg)"/>
+    <rect width="1200" height="440" fill="url(#wc-grid)"/>
+    <rect width="1200" height="440" fill="url(#wc-glow)"/>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="439" rx="12" fill="none" stroke="#FFD700" stroke-opacity=".22"/>
+  <g stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M14 26V14H26"/><path d="M1186 26V14H1174"/>
+    <path d="M14 414V426H26"/><path d="M1186 414V426H1174"/>
+  </g>
+  <g transform="translate(28 28)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.1429;1" dur="0.7s" fill="freeze"/>
+    <rect width="368" height="384" rx="12" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".22"/>
+    <rect width="368" height="2" fill="#FFD700"><animate attributeName="width" values="0;0;368" keyTimes="0;0.2500;1" dur="1.6s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <text x="24" y="38" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="2" fill="#8A7A3A">▸ 01 / SNAPSHOT</text>
+    <circle cx="342" cy="34" r="4" fill="#FFD700"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="24" y="80" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="900" letter-spacing="2" fill="#FFF8DC">SNAPSHOT</text>
+    <text x="24" y="102" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" fill="#FFD700">who.am.i()</text>
+    <line x1="24" y1="120" x2="344" y2="120" stroke="#FFD700" stroke-opacity=".2"/>
+    <text x="24" y="150" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#E6E1CF">Full-Stack Dev convirtiendo ideas en</text><text x="24" y="174" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#E6E1CF">código. Obsesión por la DX, sistemas</text><text x="24" y="198" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#E6E1CF">escalables y experiencias que se</text><text x="24" y="222" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14.5" fill="#E6E1CF">sienten instantáneas.</text><rect x="24" y="262" width="36" height="24" rx="5" fill="#FFD700" fill-opacity=".08" stroke="#FFD700" stroke-opacity=".35"/><text x="42" y="278" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" fill="#FFD700">TS</text><rect x="68" y="262" width="76" height="24" rx="5" fill="#FFD700" fill-opacity=".08" stroke="#FFD700" stroke-opacity=".35"/><text x="106" y="278" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" fill="#FFD700">Laravel</text><rect x="152" y="262" width="68" height="24" rx="5" fill="#FFD700" fill-opacity=".08" stroke="#FFD700" stroke-opacity=".35"/><text x="186" y="278" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" fill="#FFD700">Spring</text><rect x="228" y="262" width="68" height="24" rx="5" fill="#FFD700" fill-opacity=".08" stroke="#FFD700" stroke-opacity=".35"/><text x="262" y="278" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" fill="#FFD700">DevOps</text>
+    <line x1="24" y1="330" x2="344" y2="330" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="24" y="358" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">mindset ▸ <tspan fill="#FFD700">build · ship · iterate</tspan></text>
+  </g>
+  <g transform="translate(416 28)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.3182;1" dur="0.88s" fill="freeze"/>
+    <rect width="368" height="384" rx="12" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".22"/>
+    <rect width="368" height="2" fill="#FFD700"><animate attributeName="width" values="0;0;368" keyTimes="0;0.3258;1" dur="1.78s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <text x="24" y="38" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="2" fill="#8A7A3A">▸ 02 / CURRENTLY</text>
+    <circle cx="342" cy="34" r="4" fill="#FFD700"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="24" y="80" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="900" letter-spacing="2" fill="#FFF8DC">CURRENTLY</text>
+    <text x="24" y="102" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" fill="#FFD700">active.streams()</text>
+    <line x1="24" y1="120" x2="344" y2="120" stroke="#FFD700" stroke-opacity=".2"/>
+    <g transform="translate(24 150)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.6522;1" dur="1.15s" fill="freeze"/>
+        <text font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="13" fill="#FFD700">▸</text>
+        <text x="20" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="1.5" fill="#8A7A3A">SHIP</text>
+        <text x="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#FFF8DC">EAS1 HOSTING · infra</text></g><g transform="translate(24 190)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.6800;1" dur="1.25s" fill="freeze"/>
+        <text font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="13" fill="#FFD700">▸</text>
+        <text x="20" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="1.5" fill="#8A7A3A">CODE</text>
+        <text x="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#FFF8DC">Laravel &amp; Spring Boot</text></g><g transform="translate(24 230)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.7037;1" dur="1.35s" fill="freeze"/>
+        <text font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="13" fill="#FFD700">▸</text>
+        <text x="20" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="1.5" fill="#8A7A3A">LEARN</text>
+        <text x="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#FFF8DC">DevOps &amp; AI agents</text></g><g transform="translate(24 270)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.7241;1" dur="1.45s" fill="freeze"/>
+        <text font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="13" fill="#FFD700">▸</text>
+        <text x="20" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="1.5" fill="#8A7A3A">BUILD</text>
+        <text x="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#FFF8DC">Flutter · Unity · Python</text></g>
+    <line x1="24" y1="330" x2="344" y2="330" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="24" y="358" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">status ▸ <tspan fill="#FFD700">available for hire</tspan></text>
+  </g>
+  <g transform="translate(804 28)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.4340;1" dur="1.06s" fill="freeze"/>
+    <rect width="368" height="384" rx="12" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".22"/>
+    <rect width="368" height="2" fill="#FFD700"><animate attributeName="width" values="0;0;368" keyTimes="0;0.3878;1" dur="1.96s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <text x="24" y="38" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="2" fill="#8A7A3A">▸ 03 / FIND ME</text>
+    <circle cx="342" cy="34" r="4" fill="#FFD700"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="24" y="80" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="900" letter-spacing="2" fill="#FFF8DC">FIND ME</text>
+    <text x="24" y="102" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" fill="#FFD700">contact.channels()</text>
+    <line x1="24" y1="120" x2="344" y2="120" stroke="#FFD700" stroke-opacity=".2"/>
+    <g transform="translate(24 150)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.6923;1" dur="1.3s" fill="freeze"/>
+        <text font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="13" fill="#FFD700">▸</text>
+        <text x="20" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="1.5" fill="#8A7A3A">WEB</text>
+        <text x="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#FFF8DC">eas1.com.es</text></g><g transform="translate(24 190)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.7143;1" dur="1.4s" fill="freeze"/>
+        <text font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="13" fill="#FFD700">▸</text>
+        <text x="20" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="1.5" fill="#8A7A3A">BLOG</text>
+        <text x="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#FFF8DC">dev.to/davidcreat</text></g><g transform="translate(24 230)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.7333;1" dur="1.5s" fill="freeze"/>
+        <text font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="13" fill="#FFD700">▸</text>
+        <text x="20" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="1.5" fill="#8A7A3A">MAIL</text>
+        <text x="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#FFF8DC">david.fonseca12p@gmail.com</text></g><g transform="translate(24 270)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.7500;1" dur="1.6s" fill="freeze"/>
+        <text font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="13" fill="#FFD700">▸</text>
+        <text x="20" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" letter-spacing="1.5" fill="#8A7A3A">GEO</text>
+        <text x="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#FFF8DC">Ibagué, Tolima · UTC−5</text></g>
+    <line x1="24" y1="330" x2="344" y2="330" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="24" y="358" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">uptime ▸ <tspan fill="#FFD700">24 / 7</tspan></text>
+  </g>
 </svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="140" viewBox="0 0 400 140" role="img" aria-label="fesc-student-agenda repository" fill="none">
+  <title>fesc-student-agenda repository</title>
+  <defs>
+    <linearGradient id="rc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05060a"/><stop offset=".5" stop-color="#0b0e17"/><stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+    <radialGradient id="rc-glow" cx=".2" cy="0" r="1">
+      <stop offset="0" stop-color="#FFD700" stop-opacity=".14"/><stop offset=".6" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="rc-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFD700" stroke-opacity=".05"/>
+    </pattern>
+    <clipPath id="rc-clip"><rect width="400" height="140" rx="8"/></clipPath>
+  </defs>
+  <g clip-path="url(#rc-clip)">
+    <rect width="400" height="140" fill="url(#rc-bg)"/>
+    
+    <rect width="400" height="140" fill="url(#rc-glow)"/>
+  </g>
+  <rect x=".5" y=".5" width="399" height="139" rx="8" fill="none" stroke="#FFD700" stroke-opacity=".22"/>
+  
+  <g transform="translate(20 22)"><path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H11v11H2a1 1 0 0 0 0 2h9v1H1.5A1.5 1.5 0 0 1 0 12.5Z" fill="#FFD700"/></g>
+  <text x="40" y="34" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="800" fill="#FFD700">fesc-student-agenda</text>
+  <circle cx="376" cy="29" r="3.5" fill="#FFD700"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" repeatCount="indefinite"/></circle>
+  <text x="20" y="64" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12.5" fill="#E6E1CF" fill-opacity=".85">Desarrollar una agenda personal inteligente que</text>
+  <text x="20" y="82" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12.5" fill="#E6E1CF" fill-opacity=".85">permita a los estudiantes mejorar su organización y…</text>
+  <circle cx="26" cy="114" r="6" fill="#3178c6"/><text x="38" y="118" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" fill="#E6E1CF">TypeScript</text>
+  <g transform="translate(122 108)"><path d="M6 0l1.8 3.8 4.2.5-3.1 2.9.8 4.1L6 9.3 2.3 11.3l.8-4.1L0 4.3l4.2-.5Z" fill="#FFD700"/></g><text x="139" y="118" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" fill="#E6E1CF">3</text>
+  <g transform="translate(167 107)"><g stroke="#FFD700" stroke-width="1.4" fill="none"><circle cx="2.5" cy="2" r="1.6"/><circle cx="9.5" cy="2" r="1.6"/><circle cx="6" cy="11" r="1.6"/><path d="M2.5 3.6V5a1.5 1.5 0 0 0 1.5 1.5h4A1.5 1.5 0 0 0 9.5 5V3.6M6 6.5v2.9"/></g></g><text x="184" y="118" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" fill="#E6E1CF">0</text>
+  <text x="380" y="118" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">Feb 2025</text>
+</svg>

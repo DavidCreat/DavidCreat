@@ -1,97 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" role="img" aria-label="Commits by hour of day" fill="none">
+  <title>Commits by hour of day</title>
   <defs>
-    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0%"   stop-color="#b8860b"/>
-      <stop offset="60%"  stop-color="#ffd700"/>
-      <stop offset="100%" stop-color="#fff8dc"/>
+    <linearGradient id="ph-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05060a"/><stop offset=".5" stop-color="#0b0e17"/><stop offset="1" stop-color="#05060a"/>
     </linearGradient>
-    <linearGradient id="barLow" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0%"   stop-color="#3a2d00"/>
-      <stop offset="100%" stop-color="#8a6d00"/>
-    </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.2" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <style>
-      .card-bg { fill: #0a0a0a; stroke: #1a1a1a; stroke-width: 1; }
-      .title   { font: 700 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; fill: #FFD700; }
-      .sub     { font: 500 9px ui-monospace, 'SF Mono', 'Consolas', monospace; fill: #b8860b; letter-spacing: 0.2em; }
-      .hour    { font: 600 8px ui-monospace, 'SF Mono', 'Consolas', monospace; fill: #8a6d00; }
-      .peak    { font: 700 9px ui-monospace, 'SF Mono', 'Consolas', monospace; fill: #FFD700; }
-      .axis    { stroke: rgba(255,215,0,0.1); stroke-width: 1; }
-    </style>
+    <radialGradient id="ph-glow" cx=".2" cy="0" r="1">
+      <stop offset="0" stop-color="#FFD700" stop-opacity=".14"/><stop offset=".6" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ph-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFD700" stroke-opacity=".05"/>
+    </pattern>
+    <clipPath id="ph-clip"><rect width="495" height="195" rx="8"/></clipPath>
   </defs>
-
-  <rect x="0.5" y="0.5" width="494" height="194" rx="6" class="card-bg"/>
-
-  <!-- Title -->
-  <text x="20" y="26" class="title">Productive Time</text>
-  <text x="20" y="42" class="sub">// HOURS UTC−5 //</text>
-
-  <!-- Peak indicator -->
-  <g transform="translate(345 22)">
-    <rect x="0" y="0" width="130" height="22" rx="4" fill="rgba(255,215,0,0.08)" stroke="rgba(255,215,0,0.3)" stroke-width="1"/>
-    <circle cx="12" cy="11" r="3" fill="#FFD700">
-      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
-    </circle>
-    <text x="22" y="15" class="peak">PEAK · 20:00 − 23:00</text>
+  <g clip-path="url(#ph-clip)">
+    <rect width="495" height="195" fill="url(#ph-bg)"/>
+    
+    <rect width="495" height="195" fill="url(#ph-glow)"/>
   </g>
-
-  <!-- Grid -->
-  <line x1="20"  y1="150" x2="475" y2="150" class="axis"/>
-  <line x1="20"  y1="110" x2="475" y2="110" class="axis" stroke-dasharray="2 4"/>
-  <line x1="20"  y1="80"  x2="475" y2="80"  class="axis" stroke-dasharray="2 4"/>
-
-  <!-- Bars: 24 hours, width=16, gap=3, starting x=25 -->
-  <!-- Values represent relative productivity: 0-10 scale mapped to height -->
-  <!-- 00:05 15 25 15 10 5 25 45 55 70 80 75 60 65 75 80 78 70 65 85 95 100 85 50 -->
-
-  <g filter="url(#glow)">
-    <rect x="25"  y="144" width="16" height="6"  rx="2" fill="url(#barLow)"/>
-    <rect x="44"  y="147" width="16" height="3"  rx="2" fill="url(#barLow)"/>
-    <rect x="63"  y="140" width="16" height="10" rx="2" fill="url(#barLow)"/>
-    <rect x="82"  y="135" width="16" height="15" rx="2" fill="url(#barLow)"/>
-    <rect x="101" y="140" width="16" height="10" rx="2" fill="url(#barLow)"/>
-    <rect x="120" y="143" width="16" height="7"  rx="2" fill="url(#barLow)"/>
-    <rect x="139" y="146" width="16" height="4"  rx="2" fill="url(#barLow)"/>
-    <rect x="158" y="135" width="16" height="15" rx="2" fill="url(#bar)"/>
-    <rect x="177" y="120" width="16" height="30" rx="2" fill="url(#bar)"/>
-    <rect x="196" y="110" width="16" height="40" rx="2" fill="url(#bar)"/>
-    <rect x="215" y="95"  width="16" height="55" rx="2" fill="url(#bar)"/>
-    <rect x="234" y="85"  width="16" height="65" rx="2" fill="url(#bar)"/>
-    <rect x="253" y="90"  width="16" height="60" rx="2" fill="url(#bar)"/>
-    <rect x="272" y="105" width="16" height="45" rx="2" fill="url(#bar)"/>
-    <rect x="291" y="100" width="16" height="50" rx="2" fill="url(#bar)"/>
-    <rect x="310" y="88"  width="16" height="62" rx="2" fill="url(#bar)"/>
-    <rect x="329" y="83"  width="16" height="67" rx="2" fill="url(#bar)"/>
-    <rect x="348" y="86"  width="16" height="64" rx="2" fill="url(#bar)"/>
-    <rect x="367" y="93"  width="16" height="57" rx="2" fill="url(#bar)"/>
-    <rect x="386" y="98"  width="16" height="52" rx="2" fill="url(#bar)"/>
-    <rect x="405" y="78"  width="16" height="72" rx="2" fill="url(#bar)"/>
-    <rect x="424" y="68"  width="16" height="82" rx="2" fill="url(#bar)"/>
-    <rect x="443" y="60"  width="16" height="90" rx="2" fill="url(#bar)"/>
-    <!-- last bar is peak: add shine animation overlay -->
-    <rect x="443" y="60" width="16" height="90" rx="2" fill="#FFF8DC" opacity="0.3">
-      <animate attributeName="opacity" values="0.1;0.5;0.1" dur="2.2s" repeatCount="indefinite"/>
+  <rect x=".5" y=".5" width="494" height="194" rx="8" fill="none" stroke="#FFD700" stroke-opacity=".22"/>
+  
+  <text x="22" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="800" fill="#FFD700">Productive Time</text>
+  <text x="473" y="30" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">UTC-5 · 604 commits</text>
+  <line x1="22" y1="152.5" x2="473" y2="152.5" stroke="#FFD700" stroke-opacity=".2"/>
+    <rect x="24.0" y="73.2" width="14.8" height="78.8" rx="2" fill="#FFD700" fill-opacity="0.84">
+      <animate attributeName="height" values="0;0;78.8" keyTimes="0;0.2500;1" dur="0.8s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;73.2" keyTimes="0;0.2500;1" dur="0.8s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
     </rect>
-  </g>
-
-  <!-- Hour labels (every 4h) -->
-  <text x="33"  y="170" class="hour" text-anchor="middle">00</text>
-  <text x="109" y="170" class="hour" text-anchor="middle">04</text>
-  <text x="185" y="170" class="hour" text-anchor="middle">08</text>
-  <text x="261" y="170" class="hour" text-anchor="middle">12</text>
-  <text x="337" y="170" class="hour" text-anchor="middle">16</text>
-  <text x="413" y="170" class="hour" text-anchor="middle">20</text>
-  <text x="460" y="170" class="hour" text-anchor="middle">23</text>
-
-  <!-- Footer legend -->
-  <g transform="translate(20 182)">
-    <rect x="0"   y="-8" width="10" height="10" rx="1" fill="url(#barLow)"/>
-    <text x="16"  y="0" class="hour">low</text>
-    <rect x="52"  y="-8" width="10" height="10" rx="1" fill="url(#bar)"/>
-    <text x="68"  y="0" class="hour">high</text>
-    <text x="475" y="0" class="hour" text-anchor="end">based on commit cadence</text>
-  </g>
+    <rect x="42.8" y="61.1" width="14.8" height="90.9" rx="2" fill="#FFD700" fill-opacity="0.93">
+      <animate attributeName="height" values="0;0;90.9" keyTimes="0;0.2771;1" dur="0.83s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;61.1" keyTimes="0;0.2771;1" dur="0.83s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="61.6" y="111.1" width="14.8" height="40.9" rx="2" fill="#FFD700" fill-opacity="0.56">
+      <animate attributeName="height" values="0;0;40.9" keyTimes="0;0.3023;1" dur="0.86s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;111.1" keyTimes="0;0.3023;1" dur="0.86s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="80.4" y="142.9" width="14.8" height="9.1" rx="2" fill="#FFD700" fill-opacity="0.32">
+      <animate attributeName="height" values="0;0;9.1" keyTimes="0;0.3258;1" dur="0.89s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;142.9" keyTimes="0;0.3258;1" dur="0.89s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="99.2" y="144.4" width="14.8" height="7.6" rx="2" fill="#FFD700" fill-opacity="0.31">
+      <animate attributeName="height" values="0;0;7.6" keyTimes="0;0.3478;1" dur="0.92s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;144.4" keyTimes="0;0.3478;1" dur="0.92s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="118.0" y="141.4" width="14.8" height="10.6" rx="2" fill="#FFD700" fill-opacity="0.33">
+      <animate attributeName="height" values="0;0;10.6" keyTimes="0;0.3684;1" dur="0.95s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;141.4" keyTimes="0;0.3684;1" dur="0.95s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="136.8" y="147.5" width="14.8" height="4.5" rx="2" fill="#FFD700" fill-opacity="0.28">
+      <animate attributeName="height" values="0;0;4.5" keyTimes="0;0.3878;1" dur="0.98s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;147.5" keyTimes="0;0.3878;1" dur="0.98s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="155.5" y="147.5" width="14.8" height="4.5" rx="2" fill="#FFD700" fill-opacity="0.28">
+      <animate attributeName="height" values="0;0;4.5" keyTimes="0;0.4059;1" dur="1.01s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;147.5" keyTimes="0;0.4059;1" dur="1.01s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="174.3" y="139.9" width="14.8" height="12.1" rx="2" fill="#FFD700" fill-opacity="0.34">
+      <animate attributeName="height" values="0;0;12.1" keyTimes="0;0.4231;1" dur="1.04s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;139.9" keyTimes="0;0.4231;1" dur="1.04s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="193.1" y="138.4" width="14.8" height="13.6" rx="2" fill="#FFD700" fill-opacity="0.35">
+      <animate attributeName="height" values="0;0;13.6" keyTimes="0;0.4393;1" dur="1.07s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;138.4" keyTimes="0;0.4393;1" dur="1.07s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="211.9" y="111.1" width="14.8" height="40.9" rx="2" fill="#FFD700" fill-opacity="0.56">
+      <animate attributeName="height" values="0;0;40.9" keyTimes="0;0.4545;1" dur="1.1s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;111.1" keyTimes="0;0.4545;1" dur="1.1s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="230.7" y="126.2" width="14.8" height="25.8" rx="2" fill="#FFD700" fill-opacity="0.44">
+      <animate attributeName="height" values="0;0;25.8" keyTimes="0;0.4690;1" dur="1.13s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;126.2" keyTimes="0;0.4690;1" dur="1.13s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="249.5" y="123.2" width="14.8" height="28.8" rx="2" fill="#FFD700" fill-opacity="0.47">
+      <animate attributeName="height" values="0;0;28.8" keyTimes="0;0.4828;1" dur="1.16s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;123.2" keyTimes="0;0.4828;1" dur="1.16s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="268.3" y="127.8" width="14.8" height="24.2" rx="2" fill="#FFD700" fill-opacity="0.43">
+      <animate attributeName="height" values="0;0;24.2" keyTimes="0;0.4958;1" dur="1.19s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;127.8" keyTimes="0;0.4958;1" dur="1.19s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="287.1" y="121.7" width="14.8" height="30.3" rx="2" fill="#FFD700" fill-opacity="0.48">
+      <animate attributeName="height" values="0;0;30.3" keyTimes="0;0.5082;1" dur="1.22s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;121.7" keyTimes="0;0.5082;1" dur="1.22s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="305.9" y="83.8" width="14.8" height="68.2" rx="2" fill="#FFD700" fill-opacity="0.76">
+      <animate attributeName="height" values="0;0;68.2" keyTimes="0;0.5200;1" dur="1.25s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;83.8" keyTimes="0;0.5200;1" dur="1.25s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="324.7" y="127.8" width="14.8" height="24.2" rx="2" fill="#FFD700" fill-opacity="0.43">
+      <animate attributeName="height" values="0;0;24.2" keyTimes="0;0.5313;1" dur="1.28s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;127.8" keyTimes="0;0.5313;1" dur="1.28s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="343.5" y="129.3" width="14.8" height="22.7" rx="2" fill="#FFD700" fill-opacity="0.42">
+      <animate attributeName="height" values="0;0;22.7" keyTimes="0;0.5420;1" dur="1.31s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;129.3" keyTimes="0;0.5420;1" dur="1.31s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="362.3" y="88.4" width="14.8" height="63.6" rx="2" fill="#FFD700" fill-opacity="0.73">
+      <animate attributeName="height" values="0;0;63.6" keyTimes="0;0.5522;1" dur="1.34s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;88.4" keyTimes="0;0.5522;1" dur="1.34s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="381.0" y="52.0" width="14.8" height="100.0" rx="2" fill="#FFF8DC" fill-opacity="1.00">
+      <animate attributeName="height" values="0;0;100.0" keyTimes="0;0.5620;1" dur="1.37s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;52.0" keyTimes="0;0.5620;1" dur="1.37s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="399.8" y="79.3" width="14.8" height="72.7" rx="2" fill="#FFD700" fill-opacity="0.80">
+      <animate attributeName="height" values="0;0;72.7" keyTimes="0;0.5714;1" dur="1.4s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;79.3" keyTimes="0;0.5714;1" dur="1.4s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="418.6" y="129.3" width="14.8" height="22.7" rx="2" fill="#FFD700" fill-opacity="0.42">
+      <animate attributeName="height" values="0;0;22.7" keyTimes="0;0.5804;1" dur="1.43s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;129.3" keyTimes="0;0.5804;1" dur="1.43s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="437.4" y="102.0" width="14.8" height="50.0" rx="2" fill="#FFD700" fill-opacity="0.63">
+      <animate attributeName="height" values="0;0;50.0" keyTimes="0;0.5890;1" dur="1.46s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;102.0" keyTimes="0;0.5890;1" dur="1.46s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <rect x="456.2" y="83.8" width="14.8" height="68.2" rx="2" fill="#FFD700" fill-opacity="0.76">
+      <animate attributeName="height" values="0;0;68.2" keyTimes="0;0.5973;1" dur="1.49s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="152;152;83.8" keyTimes="0;0.5973;1" dur="1.49s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+  <text x="31.4" y="168" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" fill="#8A7A3A">00h</text><text x="144.1" y="168" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" fill="#8A7A3A">06h</text><text x="256.9" y="168" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" fill="#8A7A3A">12h</text><text x="369.6" y="168" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" fill="#8A7A3A">18h</text><text x="463.6" y="168" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" fill="#8A7A3A">23h</text>
+  <text x="22" y="183" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">peak ▸ <tspan fill="#FFF8DC">19:00</tspan> · profile ▸ <tspan fill="#FFD700">night owl</tspan></text>
 </svg>

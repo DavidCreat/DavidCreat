@@ -1,12 +1,12 @@
 <!--
   ╔══════════════════════════════════════════════════════════════════╗
-  ║  DAVID FONSECA  //  GITHUB PROFILE  //  v2026.04                 ║
+  ║  DAVID FONSECA  //  GITHUB PROFILE  //  v2026.11                 ║
   ║                                                                  ║
   ║  Construido con:                                                 ║
-  ║   - SVG animado con <foreignObject> + CSS keyframes              ║
-  ║   - SMIL nativo (animate, animateTransform)                      ║
-  ║   - GitHub Flavored Markdown + Alerts + Mermaid                  ║
-  ║   - LaTeX / KaTeX para ecuaciones                                ║
+  ║   - SVG puro + SMIL (sin foreignObject: se ve en Safari y movil) ║
+  ║   - Datos REALES de la API de GitHub (scripts/generate-svgs.mjs) ║
+  ║   - GitHub Flavored Markdown + Alerts + Mermaid + GeoJSON        ║
+  ║   - LaTeX / MathJax para ecuaciones                              ║
   ║   - GitHub Actions para contenido dinamico                       ║
   ║                                                                  ║
   ║  "Lo que ves no es una imagen. Es codigo que se dibuja a si      ║
@@ -92,7 +92,7 @@
       <sub><samp>services · typed contracts · real-time</samp></sub>
     </td>
     <td align="center" valign="middle">
-      <img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,graphql,bun,deno,fastapi,go&theme=dark" height="36"/>
+      <img src="https://skillicons.dev/icons?i=nodejs,nestjs,express,php,laravel,java,spring,dotnet&theme=dark" height="36"/>
     </td>
   </tr>
   <tr><td colspan="3"><sub>&nbsp;</sub></td></tr>
@@ -106,7 +106,7 @@
       <sub><samp>SQL · NoSQL · cache · ORM</samp></sub>
     </td>
     <td align="center" valign="middle">
-      <img src="https://skillicons.dev/icons?i=postgres,mongodb,redis,prisma,supabase&theme=dark" height="36"/>
+      <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,redis,prisma,supabase&theme=dark" height="36"/>
     </td>
   </tr>
   <tr><td colspan="3"><sub>&nbsp;</sub></td></tr>
@@ -129,12 +129,12 @@
       <img src="https://img.shields.io/badge/TIER%20V-FFD700?style=for-the-badge&labelColor=0a0a0a&color=FFD700" height="28"/>
     </td>
     <td valign="middle">
-      <b>Tooling &amp; AI</b>
+      <b>Mobile, Games &amp; AI</b>
       <br/>
-      <sub><samp>dev-loop · testing · design · ML</samp></sub>
+      <sub><samp>Flutter · Unity · Python · notebooks</samp></sub>
     </td>
     <td align="center" valign="middle">
-      <img src="https://skillicons.dev/icons?i=git,vscode,figma,vite,vitest,jest,py,tensorflow&theme=dark" height="36"/>
+      <img src="https://skillicons.dev/icons?i=flutter,dart,unity,cs,py,tensorflow,git,figma&theme=dark" height="36"/>
     </td>
   </tr>
 </table>
@@ -150,26 +150,25 @@
 </div>
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=DavidCreat&show_icons=true&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true&include_all_commits=true&count_private=true&rank_icon=percentile&card_width=450"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=DavidCreat&show_icons=true&theme=transparent&title_color=8A6D00&text_color=1a1a1a&icon_color=B8860B&hide_border=true&include_all_commits=true&count_private=true&rank_icon=percentile&card_width=450"/>
-    <img src="https://github-readme-stats.vercel.app/api?username=DavidCreat&show_icons=true&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true&include_all_commits=true&count_private=true&rank_icon=percentile&card_width=450" height="195" alt="GitHub Stats"/>
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=DavidCreat&theme=transparent&hide_border=true&stroke=FFD700&ring=FFD700&fire=FFF8DC&currStreakNum=E6E1CF&sideNums=E6E1CF&currStreakLabel=FFD700&sideLabels=FFD700&dates=E6E1CF&background=00000000"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=DavidCreat&theme=transparent&hide_border=true&stroke=B8860B&ring=B8860B&fire=FFD700&currStreakNum=1a1a1a&sideNums=1a1a1a&currStreakLabel=8A6D00&sideLabels=8A6D00&dates=1a1a1a&background=FFFFFF00"/>
-    <img src="https://streak-stats.demolab.com?user=DavidCreat&theme=transparent&hide_border=true&stroke=FFD700&ring=FFD700&fire=FFF8DC&currStreakNum=E6E1CF&sideNums=E6E1CF&currStreakLabel=FFD700&sideLabels=FFD700&dates=E6E1CF&background=00000000" height="195" alt="Streak"/>
-  </picture>
+  <img src="./assets/stats-board.svg" alt="Perfil · lenguajes por tamaño de codigo · commits por año · totales (datos reales de la API de GitHub)" width="100%"/>
+</div>
+
+<div align="center">
+  <img src="./assets/languages.svg" width="49%" alt="Lenguajes mas usados (bytes en repos publicos)"/>
+  <img src="./assets/productive-hours.svg" width="49%" alt="Commits por hora del dia (UTC-5)"/>
 </div>
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=DavidCreat&layout=compact&theme=transparent&title_color=FFD700&text_color=E6E1CF&hide_border=true&langs_count=10&card_width=450"/>
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=DavidCreat&layout=compact&theme=transparent&title_color=8A6D00&text_color=1a1a1a&hide_border=true&langs_count=10&card_width=450"/>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DavidCreat&layout=compact&theme=transparent&title_color=FFD700&text_color=E6E1CF&hide_border=true&langs_count=10&card_width=450" height="195" alt="Top Languages"/>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=DavidCreat&theme=transparent&hide_border=true&stroke=FFD700&ring=FFD700&fire=FFF8DC&currStreakNum=E6E1CF&sideNums=E6E1CF&currStreakLabel=FFD700&sideLabels=FFD700&dates=E6E1CF&background=00000000"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=DavidCreat&theme=transparent&hide_border=true&stroke=B8860B&ring=B8860B&fire=FFD700&currStreakNum=1a1a1a&sideNums=1a1a1a&currStreakLabel=8A6D00&sideLabels=8A6D00&dates=1a1a1a&background=FFFFFF00"/>
+    <img src="https://streak-stats.demolab.com?user=DavidCreat&theme=transparent&hide_border=true&stroke=FFD700&ring=FFD700&fire=FFF8DC&currStreakNum=E6E1CF&sideNums=E6E1CF&currStreakLabel=FFD700&sideLabels=FFD700&dates=E6E1CF&background=00000000" alt="Racha de contribuciones"/>
   </picture>
-  <img src="./assets/productive-hours.svg" height="195" alt="Productive Time"/>
 </div>
+
+> [!NOTE]
+> Las tarjetas de arriba se regeneran cada dia con un workflow propio (`profile-svgs.yml`) que consulta la API GraphQL de GitHub.
+> Ningun numero esta escrito a mano.
 
 <br/>
 
@@ -214,12 +213,9 @@
 </div>
 
 <div align="center">
-  <img src="./assets/trophies.svg" alt="Trophies — achievements unlocked" width="100%"/>
+  <img src="./assets/trophies.svg" alt="Logros calculados con datos reales: commits, repos, estrellas, PRs, lenguajes, seguidores y años" width="100%"/>
 </div>
 
-<div align="center">
-  <img src="./assets/stats-board.svg" alt="Profile Details · Repos per Language · Most Commit Language · Stats" width="100%"/>
-</div>
 
 <br/>
 
@@ -231,32 +227,20 @@
   <img src="./assets/headers/07-pinned-repos.svg" alt="07 · pinned.repositories()" width="100%"/>
 </div>
 
-<div align="center">
-  <a href="https://github.com/DavidCreat/Sistema-de-Gestion-Orgnizada">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Sistema-de-Gestion-Orgnizada&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="Sistema de Gestion Organizada"/>
-  </a>
-  <a href="https://github.com/DavidCreat/fesc-student-agenda">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=fesc-student-agenda&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="FESC Student Agenda"/>
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://github.com/DavidCreat/Archivo_Central">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Archivo_Central&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="Archivo Central"/>
-  </a>
-  <a href="https://github.com/DavidCreat/Angular-.Net">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=Angular-.Net&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="Angular + .NET"/>
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://github.com/DavidCreat/TaylorViz">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=TaylorViz&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="TaylorViz — Python"/>
-  </a>
-  <a href="https://github.com/DavidCreat/hackaton">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=DavidCreat&repo=hackaton&theme=transparent&title_color=FFD700&text_color=E6E1CF&icon_color=FFD700&hide_border=true" height="135" alt="Hackaton"/>
-  </a>
-</div>
+<!-- REPOS:START -->
+<p align="center">
+  <a href="https://github.com/DavidCreat/Sistema-de-Gestion-Orgnizada"><img src="./assets/repos/Sistema-de-Gestion-Orgnizada.svg" width="49%" alt="Sistema-de-Gestion-Orgnizada"/></a>
+  <a href="https://github.com/DavidCreat/fesc-student-agenda"><img src="./assets/repos/fesc-student-agenda.svg" width="49%" alt="fesc-student-agenda"/></a>
+</p>
+<p align="center">
+  <a href="https://github.com/DavidCreat/Archivo_Central"><img src="./assets/repos/Archivo_Central.svg" width="49%" alt="Archivo_Central"/></a>
+  <a href="https://github.com/DavidCreat/Angular-.Net"><img src="./assets/repos/Angular-.Net.svg" width="49%" alt="Angular-.Net"/></a>
+</p>
+<p align="center">
+  <a href="https://github.com/DavidCreat/TaylorViz"><img src="./assets/repos/TaylorViz.svg" width="49%" alt="TaylorViz"/></a>
+  <a href="https://github.com/DavidCreat/metodos_calculo_app"><img src="./assets/repos/metodos_calculo_app.svg" width="49%" alt="metodos_calculo_app"/></a>
+</p>
+<!-- REPOS:END -->
 
 <br/>
 
@@ -295,11 +279,13 @@ flowchart LR
     M9 --> Y5
 
     Y5["2025"]:::year --> M10["TaylorViz · Python<br/>metodos numericos"]:::milestone
-    M10 --> M11["EAS1 HOSTING<br/>DevOps · infra"]:::milestone
+    M10 --> M10b["Flutter + Dart<br/>metodos_calculo_app"]:::milestone
+    M10b --> M11["EAS1 HOSTING<br/>DevOps · Docker"]:::milestone
     M11 --> Y6
 
-    Y6["2026"]:::year --> M12["Spring Boot<br/>Java enterprise"]:::highlight
-    M12 --> M13["AI Agents<br/>Full Stack Architect"]:::highlight
+    Y6["2026"]:::year --> M12["Spring Boot<br/>arquitectura hexagonal"]:::highlight
+    M12 --> M12b["Unity · C#<br/>tiro_al_blanco"]:::highlight
+    M12b --> M13["AI · notebooks<br/>EXAM_AI"]:::highlight
 ```
 
 <br/>
@@ -435,18 +421,37 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
 <br/>
 
 <!-- ════════════════════════════════════════════════════════════════ -->
-<!--  12  ·  NOW PLAYING                                               -->
+<!--  12  ·  GEO (mapa GeoJSON nativo de GitHub)                       -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
-  <img src="./assets/headers/12-now-playing.svg" alt="12 · now.playing()" width="100%"/>
+  <img src="./assets/headers/12-geo-locate.svg" alt="12 · geo.locate()" width="100%"/>
 </div>
 
-<div align="center">
-  <a href="https://spotify-github-profile.kittinanx.com/api/view.svg?uid=ytp4zazw91jvaybdwrk3bshd9&redirect=true">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view.svg?uid=ytp4zazw91jvaybdwrk3bshd9&cover_image=true&theme=novatorem&show_offline=true&background_color=0a0a0a&interchange=true&bar_color=FFD700&bar_color_cover=false" alt="Spotify — Now Playing"/>
-  </a>
-</div>
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "David Fonseca · base de operaciones",
+        "description": "Ibagué, Tolima, Colombia · UTC-5 · trabajo remoto",
+        "marker-color": "#FFD700",
+        "marker-symbol": "star"
+      },
+      "geometry": { "type": "Point", "coordinates": [-75.2322, 4.4389] }
+    }
+  ]
+}
+```
+
+<!--
+  Spotify "Now Playing" desactivado: el servicio responde
+  "Invalid Spotify access_token or refresh_token". Para reactivarlo, vuelve a
+  iniciar sesion en https://github.com/kittinan/spotify-github-profile y pega
+  aqui el nuevo bloque con tu uid.
+-->
 
 <br/>
 
@@ -458,13 +463,9 @@ visualize([1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
   <img src="./assets/headers/13-hire-me.svg" alt="13 · hire.me()" width="100%"/>
 </div>
 
-<p align="center">
-  <samp>
-    Arquitectura cloud &nbsp;·&nbsp; migracion a TypeScript end-to-end &nbsp;·&nbsp; MVPs de AI en produccion.
-    <br/>
-    <b>Hablemos.</b>
-  </samp>
-</p>
+> [!TIP]
+> **Disponible para proyectos.** Arquitectura cloud · backends con Laravel y Spring Boot · migracion a TypeScript end-to-end · MVPs de AI en produccion.
+> Respondo en menos de 24 h: <david.fonseca12p@gmail.com>
 
 <p align="center">
   <a href="mailto:david.fonseca12p@gmail.com"><img src="https://img.shields.io/badge/AGENDAR%20LLAMADA-0a0a0a?style=for-the-badge&logo=googlecalendar&logoColor=FFD700&labelColor=0a0a0a" height="32"/></a>

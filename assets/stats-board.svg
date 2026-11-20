@@ -1,235 +1,143 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" fill="none">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="width:1200px;height:340px;">
-      <style>
-        .sb-wrap {
-          width: 1200px; height: 340px;
-          background: linear-gradient(135deg, #05060a 0%, #0a0d15 50%, #05060a 100%);
-          font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          color: #e6e1cf;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 14px;
-          padding: 20px;
-          box-sizing: border-box;
-          position: relative;
-        }
-        .sb-card {
-          position: relative;
-          background: linear-gradient(160deg, rgba(255,215,0,0.04), rgba(10,10,10,0.6));
-          border: 1px solid rgba(255,215,0,0.2);
-          border-radius: 10px;
-          padding: 18px 18px 14px;
-          display: flex; flex-direction: column;
-          box-sizing: border-box;
-          overflow: hidden;
-        }
-        .sb-card::before {
-          content: '';
-          position: absolute; top: 0; left: 0; right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, #ffd700, transparent);
-          animation: sbscan 4s ease-in-out infinite;
-        }
-        @keyframes sbscan {
-          0%,100% { transform: translateX(-100%); }
-          50%     { transform: translateX(100%); }
-        }
-
-        .sb-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
-        .sb-tag {
-          font-family: ui-monospace, 'SF Mono', 'Consolas', monospace;
-          font-size: 9px; letter-spacing: 0.3em; color: #8a7a3a;
-        }
-        .sb-dot {
-          width: 6px; height: 6px; border-radius: 50%;
-          background: #ffd700; box-shadow: 0 0 8px #ffd700;
-          animation: sbblink 1.8s ease-in-out infinite;
-        }
-        @keyframes sbblink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-        .sb-title {
-          font-size: 15px; font-weight: 800;
-          background: linear-gradient(120deg, #fff8dc, #ffd700, #fff8dc);
-          background-size: 200% 200%;
-          -webkit-background-clip: text; background-clip: text;
-          color: transparent; -webkit-text-fill-color: transparent;
-          animation: sbshimmer 5s ease-in-out infinite;
-          letter-spacing: 1.5px;
-          margin: 2px 0 12px 0;
-        }
-        @keyframes sbshimmer {
-          0%,100% { background-position: 0% 50%; }
-          50%     { background-position: 100% 50%; }
-        }
-        .sb-divider {
-          height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), transparent);
-          margin-bottom: 12px;
-        }
-
-        .pd-row { display: flex; justify-content: space-between; align-items: baseline; padding: 4px 0; font-size: 11px; }
-        .pd-row .k { color: #8a7a3a; font-family: ui-monospace, monospace; letter-spacing: 0.15em; }
-        .pd-row .v { color: #fff8dc; font-weight: 600; font-size: 11px; }
-        .pd-row .hl { color: #ffd700; }
-
-        .donut-wrap { display: flex; align-items: center; gap: 12px; }
-        .donut { position: relative; width: 90px; height: 90px; flex-shrink: 0; }
-        .donut svg { width: 100%; height: 100%; transform: rotate(-90deg); }
-        .donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .donut-center .num { font-size: 20px; font-weight: 800; color: #fff8dc; }
-        .donut-center .lbl { font-size: 8px; color: #8a7a3a; font-family: ui-monospace, monospace; letter-spacing: 0.2em; }
-        .lang-list { font-size: 10px; line-height: 1.7; flex: 1; }
-        .lang-list .li { display: flex; align-items: center; gap: 6px; }
-        .lang-list .sw { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
-        .lang-list .name { color: #d8d3bf; flex: 1; }
-        .lang-list .pct { color: #8a7a3a; font-family: ui-monospace, monospace; font-size: 9px; }
-
-        .bar-row { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
-        .bar-row .item { display: flex; flex-direction: column; gap: 2px; }
-        .bar-row .head { display: flex; justify-content: space-between; font-size: 10px; }
-        .bar-row .n { color: #e6e1cf; font-weight: 600; }
-        .bar-row .p { color: #8a7a3a; font-family: ui-monospace, monospace; font-size: 9px; }
-        .bar-row .track { height: 6px; background: rgba(255,215,0,0.08); border-radius: 3px; overflow: hidden; }
-        .bar-row .fill {
-          height: 100%;
-          background: linear-gradient(90deg, #b8860b, #ffd700, #fff8dc);
-          border-radius: 3px;
-          box-shadow: 0 0 6px rgba(255,215,0,0.5);
-          animation: growBar 1.5s ease-out;
-        }
-        @keyframes growBar { from { width: 0%; } }
-
-        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 8px; }
-        .stat-cell { background: rgba(255,215,0,0.04); border: 1px solid rgba(255,215,0,0.15); border-radius: 6px; padding: 8px 10px; }
-        .stat-cell .val { font-size: 18px; font-weight: 800; color: #fff8dc; line-height: 1; }
-        .stat-cell .lbl { font-size: 8px; color: #8a7a3a; font-family: ui-monospace, monospace; letter-spacing: 0.2em; margin-top: 4px; }
-        .stat-cell.hot .val { background: linear-gradient(120deg, #ffd700, #fff8dc); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
-
-        .sb-footer {
-          margin-top: auto;
-          padding-top: 10px;
-          font-family: ui-monospace, monospace;
-          font-size: 9px;
-          color: #b8860b;
-          letter-spacing: 0.2em;
-          border-top: 1px dashed rgba(255,215,0,0.2);
-        }
-        .sb-footer .k { color: #ffd700; }
-      </style>
-
-      <div class="sb-wrap">
-        <!-- Card 1: Profile Details (REAL DATA) -->
-        <div class="sb-card">
-          <div class="sb-head"><span class="sb-tag">▸ 01 / PROFILE</span><span class="sb-dot"></span></div>
-          <h3 class="sb-title">PROFILE DETAILS</h3>
-          <div class="sb-divider"></div>
-          <div class="pd-row"><span class="k">user</span><span class="v">@DavidCreat</span></div>
-          <div class="pd-row"><span class="k">name</span><span class="v">David_Creat</span></div>
-          <div class="pd-row"><span class="k">org</span><span class="v">EAS1 HOSTING</span></div>
-          <div class="pd-row"><span class="k">loc</span><span class="v">Ibague · CO</span></div>
-          <div class="pd-row"><span class="k">since</span><span class="v">Mar 2021</span></div>
-          <div class="pd-row"><span class="k">status</span><span class="v hl">online</span></div>
-          <div class="sb-footer"><span class="k">health ▸</span> 5 years strong</div>
-        </div>
-
-        <!-- Card 2: Repos per Language (REAL DATA: based on 49 repos analyzed) -->
-        <div class="sb-card">
-          <div class="sb-head"><span class="sb-tag">▸ 02 / LANGUAGES</span><span class="sb-dot"></span></div>
-          <h3 class="sb-title">REPOS per LANG</h3>
-          <div class="sb-divider"></div>
-          <div class="donut-wrap">
-            <div class="donut">
-              <svg viewBox="0 0 36 36">
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="rgba(255,215,0,0.08)" stroke-width="4"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#ffd700" stroke-width="4" stroke-dasharray="30 70" stroke-dashoffset="0"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#fff8dc" stroke-width="4" stroke-dasharray="18 82" stroke-dashoffset="-30"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#e6c200" stroke-width="4" stroke-dasharray="16 84" stroke-dashoffset="-48"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#b8860b" stroke-width="4" stroke-dasharray="14 86" stroke-dashoffset="-64"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#8a6d00" stroke-width="4" stroke-dasharray="12 88" stroke-dashoffset="-78"/>
-                <circle cx="18" cy="18" r="15.915" fill="none" stroke="#5a4a0a" stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-90"/>
-              </svg>
-              <div class="donut-center">
-                <span class="num">49</span>
-                <span class="lbl">REPOS</span>
-              </div>
-            </div>
-            <div class="lang-list">
-              <div class="li"><span class="sw" style="background:#ffd700"></span><span class="name">HTML</span><span class="pct">30%</span></div>
-              <div class="li"><span class="sw" style="background:#fff8dc"></span><span class="name">CSS</span><span class="pct">18%</span></div>
-              <div class="li"><span class="sw" style="background:#e6c200"></span><span class="name">TypeScript</span><span class="pct">16%</span></div>
-              <div class="li"><span class="sw" style="background:#b8860b"></span><span class="name">PHP</span><span class="pct">14%</span></div>
-              <div class="li"><span class="sw" style="background:#8a6d00"></span><span class="name">Python</span><span class="pct">12%</span></div>
-              <div class="li"><span class="sw" style="background:#5a4a0a"></span><span class="name">Other</span><span class="pct">10%</span></div>
-            </div>
-          </div>
-          <div class="sb-footer"><span class="k">polyglot ▸</span> 9 langs</div>
-        </div>
-
-        <!-- Card 3: Most Commit Language (REAL STACK FROM BIO) -->
-        <div class="sb-card">
-          <div class="sb-head"><span class="sb-tag">▸ 03 / COMMITS</span><span class="sb-dot"></span></div>
-          <h3 class="sb-title">MOST COMMIT LANG</h3>
-          <div class="sb-divider"></div>
-          <div class="bar-row">
-            <div class="item">
-              <div class="head"><span class="n">TypeScript</span><span class="p">32%</span></div>
-              <div class="track"><div class="fill" style="width:32%"></div></div>
-            </div>
-            <div class="item">
-              <div class="head"><span class="n">PHP · Laravel</span><span class="p">24%</span></div>
-              <div class="track"><div class="fill" style="width:24%"></div></div>
-            </div>
-            <div class="item">
-              <div class="head"><span class="n">Java · Spring</span><span class="p">18%</span></div>
-              <div class="track"><div class="fill" style="width:18%"></div></div>
-            </div>
-            <div class="item">
-              <div class="head"><span class="n">Python</span><span class="p">14%</span></div>
-              <div class="track"><div class="fill" style="width:14%"></div></div>
-            </div>
-            <div class="item">
-              <div class="head"><span class="n">HTML · CSS</span><span class="p">12%</span></div>
-              <div class="track"><div class="fill" style="width:12%"></div></div>
-            </div>
-          </div>
-          <div class="sb-footer"><span class="k">top ▸</span> TypeScript</div>
-        </div>
-
-        <!-- Card 4: Overall Stats (REAL NUMBERS) -->
-        <div class="sb-card">
-          <div class="sb-head"><span class="sb-tag">▸ 04 / TOTALS</span><span class="sb-dot"></span></div>
-          <h3 class="sb-title">OVERALL STATS</h3>
-          <div class="sb-divider"></div>
-          <div class="stats-grid">
-            <div class="stat-cell hot">
-              <div class="val">800+</div>
-              <div class="lbl">COMMITS</div>
-            </div>
-            <div class="stat-cell">
-              <div class="val">30+</div>
-              <div class="lbl">PULL REQS</div>
-            </div>
-            <div class="stat-cell">
-              <div class="val">15+</div>
-              <div class="lbl">ISSUES</div>
-            </div>
-            <div class="stat-cell">
-              <div class="val">25+</div>
-              <div class="lbl">STARS</div>
-            </div>
-            <div class="stat-cell">
-              <div class="val">49</div>
-              <div class="lbl">REPOS</div>
-            </div>
-            <div class="stat-cell hot">
-              <div class="val">10</div>
-              <div class="lbl">FOLLOWERS</div>
-            </div>
-          </div>
-          <div class="sb-footer"><span class="k">streak ▸</span> 5 years</div>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="GitHub stats for DavidCreat" fill="none">
+  <title>GitHub stats for DavidCreat</title>
+  <defs>
+    <linearGradient id="sb-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05060a"/><stop offset=".5" stop-color="#0b0e17"/><stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+    <radialGradient id="sb-glow" cx=".2" cy="0" r="1">
+      <stop offset="0" stop-color="#FFD700" stop-opacity=".14"/><stop offset=".6" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="sb-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FFD700" stroke-opacity=".05"/>
+    </pattern>
+    <clipPath id="sb-clip"><rect width="1200" height="340" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#sb-clip)">
+    <rect width="1200" height="340" fill="url(#sb-bg)"/>
+    <rect width="1200" height="340" fill="url(#sb-grid)"/>
+    <rect width="1200" height="340" fill="url(#sb-glow)"/>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="339" rx="12" fill="none" stroke="#FFD700" stroke-opacity=".22"/>
+  <g stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M14 26V14H26"/><path d="M1186 26V14H1174"/>
+    <path d="M14 314V326H26"/><path d="M1186 314V326H1174"/>
+  </g>
+  <g transform="translate(25 24)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.1429;1" dur="0.7s" fill="freeze"/>
+    <rect width="270" height="292" rx="10" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".2"/>
+    <rect x="0" y="0" width="270" height="2" fill="#FFD700"><animate attributeName="width" values="0;0;270" keyTimes="0;0.2000;1" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <text x="18" y="28" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" letter-spacing="2" fill="#8A7A3A">▸ 01 / PROFILE</text>
+    <circle cx="250" cy="24" r="3.5" fill="#FFD700"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="18" y="56" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" fill="#FFF8DC">PROFILE</text>
+    <line x1="18" y1="70" x2="252" y2="70" stroke="#FFD700" stroke-opacity=".18"/>
+    <text x="18" y="98" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">user</text>
+    <text x="252" y="98" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="600" fill="#E6E1CF">@DavidCreat</text>
+    <text x="18" y="126" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">org</text>
+    <text x="252" y="126" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="600" fill="#E6E1CF">EAS1 HOSTING</text>
+    <text x="18" y="154" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">loc</text>
+    <text x="252" y="154" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="600" fill="#E6E1CF">Ibagué, Tolima · CO</text>
+    <text x="18" y="182" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">since</text>
+    <text x="252" y="182" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="600" fill="#E6E1CF">Mar 2021</text>
+    <text x="18" y="210" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">repos</text>
+    <text x="252" y="210" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="600" fill="#E6E1CF">50 public</text>
+    <text x="18" y="238" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#8A7A3A">followers</text>
+    <text x="252" y="238" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" font-weight="600" fill="#E6E1CF">11</text><text x="18" y="276" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">on github ▸ <tspan fill="#FFD700">5.7 years</tspan></text></g>
+  <g transform="translate(315 24)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.2941;1" dur="0.85s" fill="freeze"/>
+    <rect width="270" height="292" rx="10" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".2"/>
+    <rect x="0" y="0" width="270" height="2" fill="#FFD700"><animate attributeName="width" values="0;0;270" keyTimes="0;0.2727;1" dur="1.65s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <text x="18" y="28" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" letter-spacing="2" fill="#8A7A3A">▸ 02 / BY CODE SIZE</text>
+    <circle cx="250" cy="24" r="3.5" fill="#FFD700"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="18" y="56" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" fill="#FFF8DC">LANGUAGES</text>
+    <line x1="18" y1="70" x2="252" y2="70" stroke="#FFD700" stroke-opacity=".18"/>
+    <circle cx="23" cy="88" r="4" fill="#663399"/>
+    <text x="34" y="92" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">CSS</text>
+    <text x="252" y="92" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">25.8%</text>
+    <rect x="18" y="99" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
+    <rect x="18" y="99" width="60.5" height="4" rx="2" fill="#663399"><animate attributeName="width" values="0;0;60.5" keyTimes="0;0.4000;1" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <circle cx="23" cy="118" r="4" fill="#e34c26"/>
+    <text x="34" y="122" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">HTML</text>
+    <text x="252" y="122" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">23.6%</text>
+    <rect x="18" y="129" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
+    <rect x="18" y="129" width="55.1" height="4" rx="2" fill="#e34c26"><animate attributeName="width" values="0;0;55.1" keyTimes="0;0.4375;1" dur="1.6s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <circle cx="23" cy="148" r="4" fill="#DA5B0B"/>
+    <text x="34" y="152" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">Jupyter Notebook</text>
+    <text x="252" y="152" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">16.8%</text>
+    <rect x="18" y="159" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
+    <rect x="18" y="159" width="39.2" height="4" rx="2" fill="#DA5B0B"><animate attributeName="width" values="0;0;39.2" keyTimes="0;0.4706;1" dur="1.7s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <circle cx="23" cy="178" r="4" fill="#f1e05a"/>
+    <text x="34" y="182" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">JavaScript</text>
+    <text x="252" y="182" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">15.3%</text>
+    <rect x="18" y="189" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
+    <rect x="18" y="189" width="35.7" height="4" rx="2" fill="#f1e05a"><animate attributeName="width" values="0;0;35.7" keyTimes="0;0.5000;1" dur="1.8s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <circle cx="23" cy="208" r="4" fill="#3178c6"/>
+    <text x="34" y="212" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">TypeScript</text>
+    <text x="252" y="212" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">3.4%</text>
+    <rect x="18" y="219" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
+    <rect x="18" y="219" width="7.9" height="4" rx="2" fill="#3178c6"><animate attributeName="width" values="0;0;7.9" keyTimes="0;0.5263;1" dur="1.9s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <circle cx="23" cy="238" r="4" fill="#4F5D95"/>
+    <text x="34" y="242" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="12" font-weight="600" fill="#E6E1CF">PHP</text>
+    <text x="252" y="242" text-anchor="end" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="11" fill="#FFD700">3.1%</text>
+    <rect x="18" y="249" width="234" height="4" rx="2" fill="#FFD700" fill-opacity=".08"/>
+    <rect x="18" y="249" width="7.3" height="4" rx="2" fill="#4F5D95"><animate attributeName="width" values="0;0;7.3" keyTimes="0;0.5500;1" dur="2s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect><text x="18" y="276" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">polyglot ▸ <tspan fill="#FFD700">25 languages</tspan></text></g>
+  <g transform="translate(605 24)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.4000;1" dur="1s" fill="freeze"/>
+    <rect width="270" height="292" rx="10" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".2"/>
+    <rect x="0" y="0" width="270" height="2" fill="#FFD700"><animate attributeName="width" values="0;0;270" keyTimes="0;0.3333;1" dur="1.8s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <text x="18" y="28" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" letter-spacing="2" fill="#8A7A3A">▸ 03 / TIMELINE</text>
+    <circle cx="250" cy="24" r="3.5" fill="#FFD700"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="18" y="56" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" fill="#FFF8DC">COMMITS / YEAR</text>
+    <line x1="18" y1="70" x2="252" y2="70" stroke="#FFD700" stroke-opacity=".18"/>
+    <rect x="22.5" y="92" width="30.0" height="150.0" rx="3" fill="#FFD700" fill-opacity="1.00">
+      <animate attributeName="height" values="0;0;150.0" keyTimes="0;0.4667;1" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="242;242;92.0" keyTimes="0;0.4667;1" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <text x="37.5" y="86" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">281</text>
+    <text x="37.5" y="258" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">'21</text>
+    <rect x="61.5" y="193.42348754448398" width="30.0" height="48.6" rx="3" fill="#FFD700" fill-opacity="0.56">
+      <animate attributeName="height" values="0;0;48.6" keyTimes="0;0.4937;1" dur="1.58s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="242;242;193.4" keyTimes="0;0.4937;1" dur="1.58s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <text x="76.5" y="187.42348754448398" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">91</text>
+    <text x="76.5" y="258" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">'22</text>
+    <rect x="100.5" y="171.0035587188612" width="30.0" height="71.0" rx="3" fill="#FFD700" fill-opacity="0.66">
+      <animate attributeName="height" values="0;0;71.0" keyTimes="0;0.5181;1" dur="1.66s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="242;242;171.0" keyTimes="0;0.5181;1" dur="1.66s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <text x="115.5" y="165.0035587188612" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">133</text>
+    <text x="115.5" y="258" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">'23</text>
+    <rect x="139.5" y="195.02491103202846" width="30.0" height="47.0" rx="3" fill="#FFD700" fill-opacity="0.55">
+      <animate attributeName="height" values="0;0;47.0" keyTimes="0;0.5402;1" dur="1.74s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="242;242;195.0" keyTimes="0;0.5402;1" dur="1.74s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <text x="154.5" y="189.02491103202846" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">88</text>
+    <text x="154.5" y="258" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">'24</text>
+    <rect x="178.5" y="197.16014234875445" width="30.0" height="44.8" rx="3" fill="#FFD700" fill-opacity="0.54">
+      <animate attributeName="height" values="0;0;44.8" keyTimes="0;0.5604;1" dur="1.82s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="242;242;197.2" keyTimes="0;0.5604;1" dur="1.82s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <text x="193.5" y="191.16014234875445" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">84</text>
+    <text x="193.5" y="258" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">'25</text>
+    <rect x="217.5" y="237.19572953736656" width="30.0" height="4.8" rx="3" fill="#FFD700" fill-opacity="0.37">
+      <animate attributeName="height" values="0;0;4.8" keyTimes="0;0.5789;1" dur="1.9s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/><animate attributeName="y" values="242;242;237.2" keyTimes="0;0.5789;1" dur="1.9s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/>
+    </rect>
+    <text x="232.5" y="231.19572953736656" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" font-weight="700" fill="#FFF8DC">9</text>
+    <text x="232.5" y="258" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">'26</text><text x="18" y="276" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">peak ▸ <tspan fill="#FFD700">2021</tspan></text></g>
+  <g transform="translate(895 24)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.4783;1" dur="1.15s" fill="freeze"/>
+    <rect width="270" height="292" rx="10" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".2"/>
+    <rect x="0" y="0" width="270" height="2" fill="#FFD700"><animate attributeName="width" values="0;0;270" keyTimes="0;0.3846;1" dur="1.95s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect>
+    <text x="18" y="28" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" letter-spacing="2" fill="#8A7A3A">▸ 04 / TOTALS</text>
+    <circle cx="250" cy="24" r="3.5" fill="#FFD700"><animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="18" y="56" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="1.5" fill="#FFF8DC">OVERALL</text>
+    <line x1="18" y1="70" x2="252" y2="70" stroke="#FFD700" stroke-opacity=".18"/>
+    <rect x="18" y="84" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="30" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">686</text>
+    <text x="30" y="128" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">COMMITS</text>
+    <rect x="138" y="84" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="150" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">759</text>
+    <text x="150" y="128" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">CONTRIBS</text>
+    <rect x="18" y="146" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="30" y="174" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">36</text>
+    <text x="30" y="190" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">PULL REQS</text>
+    <rect x="138" y="146" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="150" y="174" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">39</text>
+    <text x="150" y="190" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">STARS</text>
+    <rect x="18" y="208" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="30" y="236" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">50</text>
+    <text x="30" y="252" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">REPOS</text>
+    <rect x="138" y="208" width="112" height="52" rx="6" fill="#FFD700" fill-opacity=".04" stroke="#FFD700" stroke-opacity=".12"/>
+    <text x="150" y="236" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" fill="#FFD700">11</text>
+    <text x="150" y="252" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="9" letter-spacing="1.5" fill="#8A7A3A">FOLLOWERS</text><text x="18" y="276" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" fill="#8A7A3A">sync ▸ <tspan fill="#FFD700">2026-11-20</tspan></text></g>
 </svg>

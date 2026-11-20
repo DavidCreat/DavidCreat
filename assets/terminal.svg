@@ -1,145 +1,25 @@
-<svg fill="none" viewBox="0 0 900 480" width="900" height="480" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="width:900px;height:480px;">
-      <style>
-        /* Fuentes 100% nativas del sistema: GitHub bloquea @import externos en SVG embebidos */
-        .term {
-          width: 900px; height: 480px;
-          background: linear-gradient(180deg, #0a0c12 0%, #05070c 100%);
-          border-radius: 14px;
-          border: 1px solid rgba(255,215,0,0.35);
-          box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,215,0,0.08), inset 0 0 80px rgba(255,215,0,0.04);
-          overflow: hidden;
-          font-family: ui-monospace, 'SF Mono', 'Cascadia Code', 'JetBrains Mono', 'Consolas', 'Roboto Mono', monospace;
-          position: relative;
-        }
-
-        .bar {
-          display: flex; align-items: center;
-          padding: 12px 18px;
-          background: linear-gradient(180deg, #111420, #0a0c12);
-          border-bottom: 1px solid rgba(255,215,0,0.15);
-        }
-        .dots { display: flex; gap: 8px; }
-        .dot { width: 12px; height: 12px; border-radius: 50%; }
-        .dot.r { background: #ff5f57; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2); }
-        .dot.y { background: #febc2e; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2); }
-        .dot.g { background: #28c840; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2); }
-        .title {
-          flex: 1; text-align: center;
-          font-size: 12px; color: #b8a76a;
-          letter-spacing: 0.2em;
-        }
-        .title .sep { color: #ffd700; margin: 0 10px; }
-
-        .body {
-          padding: 22px 28px;
-          font-size: 14px;
-          line-height: 1.75;
-          color: #e6e1cf;
-          position: relative;
-        }
-        .body::before {
-          content: '';
-          position: absolute; inset: 0;
-          background: repeating-linear-gradient(0deg, rgba(255,215,0,0.02) 0 2px, transparent 2px 4px);
-          pointer-events: none;
-        }
-
-        .prompt { color: #ffd700; font-weight: 700; }
-        .user   { color: #fff8dc; font-weight: 600; }
-        .at     { color: #8a7a3a; }
-        .host   { color: #ffd700; }
-        .path   { color: #b8a76a; }
-        .arrow  { color: #ffd700; }
-        .cmd    { color: #fff8dc; }
-        .flag   { color: #b8860b; }
-        .out    { color: #c9c3a9; }
-        .key    { color: #ffd700; }
-        .str    { color: #fff8dc; }
-        .num    { color: #ffbf00; }
-        .ok     { color: #28c840; }
-
-        .line {
-          display: block;
-          overflow: hidden;
-          white-space: nowrap;
-          opacity: 0;
-          animation: appear 0.01s linear forwards, type 1.2s steps(60, end) forwards;
-          max-width: 0;
-        }
-        @keyframes appear { to { opacity: 1; } }
-        @keyframes type   { to { max-width: 840px; } }
-
-        .l1  { animation-delay: 0.2s, 0.2s; }
-        .l2  { animation-delay: 1.6s, 1.6s; animation-duration: 0.01s, 0.9s; }
-        .l3  { animation-delay: 2.6s, 2.6s; animation-duration: 0.01s, 0.9s; }
-        .l4  { animation-delay: 3.6s, 3.6s; animation-duration: 0.01s, 0.9s; }
-        .l5  { animation-delay: 4.6s, 4.6s; animation-duration: 0.01s, 0.9s; }
-        .l6  { animation-delay: 5.7s, 5.7s; }
-        .l7  { animation-delay: 7.0s, 7.0s; animation-duration: 0.01s, 0.9s; }
-        .l8  { animation-delay: 8.0s, 8.0s; animation-duration: 0.01s, 0.9s; }
-        .l9  { animation-delay: 9.0s, 9.0s; animation-duration: 0.01s, 0.9s; }
-        .l10 { animation-delay: 10.0s, 10.0s; animation-duration: 0.01s, 0.9s; }
-        .l11 { animation-delay: 11.2s, 11.2s; }
-        .l12 { animation-delay: 12.5s, 12.5s; animation-duration: 0.01s, 0.9s; }
-
-        .caret {
-          display: inline-block;
-          width: 8px; height: 16px;
-          background: #ffd700;
-          vertical-align: text-bottom;
-          margin-left: 4px;
-          animation: blink 0.9s step-end infinite;
-          box-shadow: 0 0 10px #ffd700;
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-
-        .spacer { height: 6px; }
-
-        @media (prefers-color-scheme: light) {
-          .term { background: linear-gradient(180deg, #fffdf5 0%, #fff8e1 100%); border-color: rgba(138,109,0,0.35); }
-          .bar  { background: linear-gradient(180deg, #fff8dc, #fdf3c0); border-bottom-color: rgba(138,109,0,0.25); }
-          .body { color: #1a1a1a; }
-          .user { color: #1a1a1a; } .out { color: #2a2a2a; }
-          .title { color: #5a4a00; }
-        }
-      </style>
-
-      <div class="term">
-        <div class="bar">
-          <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
-          <div class="title">david<span class="sep">//</span>zsh<span class="sep">//</span>~/about-me</div>
-          <div style="width:60px;"></div>
-        </div>
-
-        <div class="body">
-          <span class="line l1">
-            <span class="user">david</span><span class="at">@</span><span class="host">eas1.com.es</span>
-            <span class="path">~/about</span> <span class="arrow">&gt;</span>
-            <span class="cmd"> whoami</span> <span class="flag">--verbose</span>
-          </span>
-
-          <span class="line l2"><span class="out">{</span></span>
-          <span class="line l3"><span class="out">  </span><span class="key">"name"</span><span class="out">: </span><span class="str">"David Fonseca"</span><span class="out">,</span></span>
-          <span class="line l4"><span class="out">  </span><span class="key">"role"</span><span class="out">: </span><span class="str">"Full Stack Architect &amp; DevOps"</span><span class="out">,</span></span>
-          <span class="line l5"><span class="out">  </span><span class="key">"location"</span><span class="out">: </span><span class="str">"Ibague, Tolima, Colombia"</span><span class="out">,</span></span>
-          <span class="line l6"><span class="out">  </span><span class="key">"focus"</span><span class="out">: [</span><span class="str">"TypeScript"</span><span class="out">, </span><span class="str">"Cloud Native"</span><span class="out">, </span><span class="str">"DX"</span><span class="out">],</span></span>
-          <span class="line l7"><span class="out">  </span><span class="key">"shipping"</span><span class="out">: </span><span class="num">24</span><span class="out"> x </span><span class="num">7</span><span class="out">,</span></span>
-          <span class="line l8"><span class="out">  </span><span class="key">"coffee_per_day"</span><span class="out">: </span><span class="num">3.14</span><span class="out">,</span></span>
-          <span class="line l9"><span class="out">  </span><span class="key">"status"</span><span class="out">: </span><span class="ok">"building the future"</span></span>
-          <span class="line l10"><span class="out">}</span></span>
-
-          <div class="spacer"></div>
-
-          <span class="line l11">
-            <span class="user">david</span><span class="at">@</span><span class="host">eas1.com.es</span>
-            <span class="path">~/about</span> <span class="arrow">&gt;</span>
-            <span class="cmd"> mission</span> <span class="flag">--short</span>
-          </span>
-          <span class="line l12"><span class="out">"Transformo cafe en arquitecturas que escalan a millones."</span><span class="caret"></span></span>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" role="img" aria-label="Terminal — whoami" fill="none">
+  <title>Terminal — whoami</title>
+  <defs><linearGradient id="tbar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151927"/><stop offset="1" stop-color="#0b0e16"/></linearGradient></defs>
+  <rect width="900" height="440" rx="14" fill="#07090f"/>
+  <path d="M0 14A14 14 0 0 1 14 0H886A14 14 0 0 1 900 14V44H0Z" fill="url(#tbar)"/>
+  <line x1="0" y1="44.5" x2="900" y2="44.5" stroke="#FFD700" stroke-opacity=".15"/>
+  <circle cx="24" cy="22" r="6.5" fill="#ff5f57"/><circle cx="46" cy="22" r="6.5" fill="#febc2e"/><circle cx="68" cy="22" r="6.5" fill="#28c840"/>
+  <text x="450" y="27" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="12" fill="#8A7A3A">david <tspan fill="#FFD700">//</tspan> zsh <tspan fill="#FFD700">//</tspan> ~/about-me</text>
+  <rect x=".5" y=".5" width="899" height="439" rx="14" stroke="#FFD700" stroke-opacity=".35"/>
+  <clipPath id="tl0"><rect x="28" y="74" width="820" height="26"><animate attributeName="width" values="0;0;820" keyTimes="0;0.3077;1" dur="1.3s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect></clipPath>
+    <text xml:space="preserve" x="32" y="92" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15" clip-path="url(#tl0)"><tspan fill="#FFD700">david</tspan><tspan fill="#8A7A3A">@</tspan><tspan fill="#FFF8DC">eas1.com.es</tspan> <tspan fill="#79C0FF">~/about</tspan> <tspan fill="#FFD700">❯</tspan> <tspan fill="#fff">whoami</tspan> <tspan fill="#8B949E">--verbose</tspan></text>
+  <text xml:space="preserve" x="32" y="118" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">{</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.7423;1" dur="0.97s" fill="freeze"/></text>
+  <text xml:space="preserve" x="32" y="144" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">  </tspan><tspan fill="#FFA657">&quot;name&quot;</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">&quot;David Fonseca&quot;</tspan><tspan fill="#8B949E">,</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.8062;1" dur="1.29s" fill="freeze"/></text>
+  <text xml:space="preserve" x="32" y="170" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">  </tspan><tspan fill="#FFA657">&quot;role&quot;</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">&quot;Full Stack Developer &amp; DevOps&quot;</tspan><tspan fill="#8B949E">,</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.8447;1" dur="1.61s" fill="freeze"/></text>
+  <text xml:space="preserve" x="32" y="196" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">  </tspan><tspan fill="#FFA657">&quot;location&quot;</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">&quot;Ibagué, Tolima, Colombia&quot;</tspan><tspan fill="#8B949E">,</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.8705;1" dur="1.93s" fill="freeze"/></text>
+  <text xml:space="preserve" x="32" y="222" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">  </tspan><tspan fill="#FFA657">&quot;stack&quot;</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#8B949E">[</tspan><tspan fill="#A5D6FF">&quot;TypeScript&quot;</tspan><tspan fill="#8B949E">, </tspan><tspan fill="#A5D6FF">&quot;Laravel&quot;</tspan><tspan fill="#8B949E">, </tspan><tspan fill="#A5D6FF">&quot;Spring Boot&quot;</tspan><tspan fill="#8B949E">]</tspan><tspan fill="#8B949E">,</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.8889;1" dur="2.25s" fill="freeze"/></text>
+  <text xml:space="preserve" x="32" y="248" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">  </tspan><tspan fill="#FFA657">&quot;company&quot;</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#A5D6FF">&quot;EAS1 HOSTING&quot;</tspan><tspan fill="#8B949E">,</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.9027;1" dur="2.57s" fill="freeze"/></text>
+  <text xml:space="preserve" x="32" y="274" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">  </tspan><tspan fill="#FFA657">&quot;coffee_per_day&quot;</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#D2A8FF">3.14</tspan><tspan fill="#8B949E">,</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.9135;1" dur="2.89s" fill="freeze"/></text>
+  <text xml:space="preserve" x="32" y="300" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">  </tspan><tspan fill="#FFA657">&quot;status&quot;</tspan><tspan fill="#8B949E">: </tspan><tspan fill="#7EE787">&quot;building the future&quot;</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.9221;1" dur="3.21s" fill="freeze"/></text>
+  <text xml:space="preserve" x="32" y="326" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#8B949E">}</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.9292;1" dur="3.53s" fill="freeze"/></text>
+  
+  <clipPath id="tl11"><rect x="28" y="360" width="820" height="26"><animate attributeName="width" values="0;0;820" keyTimes="0;0.8133;1" dur="4.82s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;.2 .8 .2 1"/></rect></clipPath>
+    <text xml:space="preserve" x="32" y="378" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15" clip-path="url(#tl11)"><tspan fill="#FFD700">david</tspan><tspan fill="#8A7A3A">@</tspan><tspan fill="#FFF8DC">eas1.com.es</tspan> <tspan fill="#79C0FF">~/about</tspan> <tspan fill="#FFD700">❯</tspan> <tspan fill="#fff">mission</tspan> <tspan fill="#8B949E">--short</tspan></text>
+  <text xml:space="preserve" x="32" y="404" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="15"><tspan fill="#7EE787">&quot;Transformo café en arquitecturas que escalan.&quot;</tspan><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.9443;1" dur="4.49s" fill="freeze"/></text><rect x="457.35" y="390" width="9" height="18" fill="#FFD700"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
 </svg>
