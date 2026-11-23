@@ -23,7 +23,7 @@
     <path d="M14 274V286H26"/><path d="M1186 274V286H1174"/>
   </g>
   <text x="600" y="40" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="800" letter-spacing="4" fill="#FFF8DC">ACHIEVEMENTS</text>
-  <text x="600" y="60" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" letter-spacing="2" fill="#8A7A3A">calculado con datos reales de la API · 2026-11-22</text>
+  <text x="600" y="60" text-anchor="middle" font-family="ui-monospace,'SF Mono','Cascadia Code',Consolas,'Liberation Mono',monospace" font-size="10" letter-spacing="2" fill="#8A7A3A">calculado con datos reales de la API · 2026-11-23</text>
   <g transform="translate(29.0 78)"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.2000;1" dur="0.75s" fill="freeze"/>
     <rect width="152" height="190" rx="10" fill="#0c0d12" fill-opacity=".85" stroke="#FFD700" stroke-opacity=".55"/>
     <text x="76" y="28" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="900" letter-spacing="2" fill="#FFD700">S</text>
